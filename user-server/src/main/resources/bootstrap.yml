@@ -1,0 +1,15 @@
+spring:
+  application:
+    # 服务名
+    name: user-server
+  profiles:
+    # 环境
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        # 文件后缀名
+        file-extension: yml
+        server-addr: 127.0.0.1:8848
