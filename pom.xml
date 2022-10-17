@@ -19,6 +19,7 @@
     <modules>
         <module>user-server</module>
         <module>test-server</module>
+        <module>gateway-server</module>
     </modules>
 
     <properties>
@@ -85,6 +86,28 @@
     </dependencyManagement>
 
     <dependencies>
+        <!--Nacos 服务注册与发现-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!--Nacos 配置-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+        <!-- SpringCloud alibaba sentinel (sentinel客户端) -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.dataformat</groupId>
+                    <artifactId>jackson-dataformat-xml</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
         <!-- SpringBoot基本场景启动依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

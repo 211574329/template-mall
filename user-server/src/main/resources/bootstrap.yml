@@ -7,9 +7,17 @@ spring:
     active: dev
   cloud:
     nacos:
+      # 服务端地址
+      server-addr: 127.0.0.1:8848
+      # 服务注册
       discovery:
-        server-addr: 127.0.0.1:8848
+        # 命名空间
+        namespace: 823e9089-86ec-43e4-a116-3a4365581c32
+      # 服务配置
       config:
         # 文件后缀名
         file-extension: yml
-        server-addr: 127.0.0.1:8848
+        # 命名空间
+        namespace: 823e9089-86ec-43e4-a116-3a4365581c32
+        # 所在分组
+        group: DEV_GROUP

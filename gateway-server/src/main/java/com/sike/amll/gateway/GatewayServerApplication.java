@@ -1,17 +1,15 @@
-package com.sike.mall.userserver;
+package com.sike.amll.gateway;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@MapperScan("com.sike.mall.userserver.**.mapper")
-public class UserServerApplication {
+public class GatewayServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(UserServerApplication.class, args);
+        SpringApplication.run(GatewayServerApplication.class, args);
     }
 
 }
