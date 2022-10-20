@@ -10,8 +10,4 @@ public class UserClientFallBack implements UserClient{
         return "未查询到user";
     }
 
-    @Override
-    public String getUser2() {
-        return "未查询到user2";
-    }
 }

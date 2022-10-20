@@ -1,6 +1,6 @@
 
 server:
-  port: 8081
+  port: 8082
 
 spring:
   application:
@@ -11,3 +11,12 @@ spring:
       discovery:
         server-addr: 127.0.0.1:8848
         namespace: 823e9089-86ec-43e4-a116-3a4365581c32
+    sentinel:
+      transport:
+        # 服务监控端口
+        dashboard: 127.0.0.1:8080
+
+# 开启openFeign对sentinel的整合
+feign:
+  sentinel:
+    enabled: true

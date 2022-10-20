@@ -1,0 +1,15 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: payment-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: 823e9089-86ec-43e4-a116-3a4365581c32
+    sentinel:
+      transport:
+        # 服务监控端口
+        dashboard: localhost:8080

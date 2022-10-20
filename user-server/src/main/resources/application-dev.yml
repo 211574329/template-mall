@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
 
 spring:
   datasource:
@@ -9,4 +9,8 @@ spring:
     url: ${spring.datasource.url}
     username: ${spring.datasource.username}
     password: ${spring.datasource.password}
-
+  cloud:
+    sentinel:
+      transport:
+        # 服务监控端口
+        dashboard: localhost:8080

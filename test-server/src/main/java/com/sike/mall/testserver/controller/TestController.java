@@ -19,8 +19,4 @@ public class TestController {
         return userClient.getUser();
     }
 
-    @GetMapping("getUser2")
-    public String getUser2(){
-        return userClient.getUser();
-    }
 }

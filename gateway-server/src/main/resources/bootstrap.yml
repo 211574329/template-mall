@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    sentinel:
+      datasource:
+        ds1:
+          nacos:
+            namespace: 823e9089-86ec-43e4-a116-3a4365581c32
+            server-addr: 127.0.0.1:8848
+            data-id: gateway-server-spark
+            group-id: DEV_GROUP
+            data-type: json
+            rule-type: flow
+

@@ -36,5 +36,10 @@ public class UserController {
         return iUserService.list();
     }
 
+    @GetMapping("list2")
+    public List<User> list2(){
+        return iUserService.list();
+    }
+
 
 }

@@ -1,4 +1,4 @@
-package com.sike.amll.gateway.filter;
+package com.sike.mall.gateway.filter;
 
 
 import lombok.Data;

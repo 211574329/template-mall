@@ -1,10 +1,10 @@
-package com.sike.amll.gateway;
+package com.sike.mall.payment;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GatewayServerApplicationTests {
+class PaymentServerApplicationTests {
 
     @Test
     void contextLoads() {

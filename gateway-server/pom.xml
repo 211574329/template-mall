@@ -8,7 +8,7 @@
         <version>1.0</version>
     </parent>
 
-    <groupId>com.sike.amll</groupId>
+    <groupId>com.sike.mall</groupId>
     <artifactId>gateway-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>gateway-server</name>
@@ -23,6 +23,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.sike.mall</groupId>
+            <artifactId>mall-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
 
     </dependencies>
 
