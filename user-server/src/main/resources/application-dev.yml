@@ -9,6 +9,11 @@ spring:
     url: ${spring.datasource.url}
     username: ${spring.datasource.username}
     password: ${spring.datasource.password}
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: root
+    database: 0
   cloud:
     sentinel:
       transport:
