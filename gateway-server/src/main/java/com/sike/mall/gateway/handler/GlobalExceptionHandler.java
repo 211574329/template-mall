@@ -30,7 +30,7 @@ public class GlobalExceptionHandler extends DefaultErrorWebExceptionHandler {
     @Override
     protected Map<String, Object> getErrorAttributes(ServerRequest request, ErrorAttributeOptions options) {
         Throwable error = super.getError(request);
-        ResultEnum resultEnum = ResultEnum.ERROR;
+        ResultEnum resultEnum = ResultEnum.FAIL;
         if (error instanceof NotFoundException) {
             resultEnum = ResultEnum.NO_HANDLER_ERROR;
         }

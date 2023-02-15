@@ -11,7 +11,7 @@ public enum ResultEnum {
     // 默认成功
     SUCCESS(200, "成功"),
     // 默认失败
-    ERROR(500, "失败"),
+    FAIL(500, "失败"),
     // 未登录
     UNAUTHORIZED(401, "用户未登录"),
     // 非法请求

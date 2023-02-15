@@ -108,7 +108,11 @@ public class RestExceptionHandler {
     }
 
 
-
+    /**
+     * 异常属性解析
+     * @param fieldErrorList    异常属性集合
+     * @return
+     */
     private List<FieldErrorVO> toValidatorMsg(List<FieldError> fieldErrorList) {
         List<FieldErrorVO> list = new ArrayList<>();
         fieldErrorList.stream().forEach(x -> list.add(FieldErrorVO.builder().field(x.getField()).message(x.getDefaultMessage()).build()));

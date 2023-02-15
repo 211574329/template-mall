@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class R<T> implements Serializable {
 
     /**
-     * 状态 300:失败, 200:成功
+     * 状态
      */
     private Integer code;
     /**
@@ -32,25 +32,48 @@ public class R<T> implements Serializable {
         this.data = data;
     }
 
+    public R(ResultEnum enums) {
+        this.code = enums.getCode();
+        this.message = enums.getMessage();
+    }
+
+    public R(ResultEnum enums, T data) {
+        this.code = enums.getCode();
+        this.message = enums.getMessage();
+        this.data = data;
+    }
+
+    /**
+     * 默认成功
+     * @return
+     */
     public static <T> R<T> success() {
-        return new R<T>(ResultEnum.SUCCESS.getCode(), ResultEnum.SUCCESS.getMessage(), null);
+        return new R<T>(ResultEnum.SUCCESS);
+    }
+
+    /**
+     * 默认失败
+     * @return
+     */
+    public static <T> R<T> fail() {
+        return new R<T>(ResultEnum.FAIL);
     }
 
     public static <T> R<T> success(T t) {
-        return new R<T>(ResultEnum.SUCCESS.getCode(), ResultEnum.SUCCESS.getMessage(), t);
+        return new R<T>(ResultEnum.SUCCESS, t);
     }
 
 
-    public static <T> R<T> fail(String message) {
-        return new R<T>(ResultEnum.ERROR.getCode(), message, null);
+    public static <T> R<T> fail(T t) {
+        return new R<T>(ResultEnum.FAIL, t);
     }
 
     public static <T> R<T> fail(ResultEnum resultEnum, T t){
-        return new R<T>(resultEnum.getCode(), resultEnum.getMessage(), t);
+        return new R<T>(resultEnum, t);
     }
 
     public static R fail(ResultEnum resultEnum){
-        return new R(resultEnum.getCode(), resultEnum.getMessage(), null);
+        return new R(resultEnum);
     }
 
 }
