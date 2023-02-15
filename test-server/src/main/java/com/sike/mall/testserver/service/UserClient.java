@@ -1,5 +1,6 @@
 package com.sike.mall.testserver.service;
 
+import com.sike.mall.user.vo.UserVO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -13,6 +14,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface UserClient {
 
     @GetMapping("/getUser")
-    String getUser();
+    UserVO getUser(Integer id);
 
 }

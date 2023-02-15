@@ -10,12 +10,12 @@ spring:
     username: ${spring.datasource.username}
     password: ${spring.datasource.password}
   redis:
-    host: 127.0.0.1
-    port: 6379
-    password: root
-    database: 0
-  cloud:
-    sentinel:
-      transport:
+    host: ${spring.redis.host}
+    port: ${spring.redis.port}
+    password: ${spring.redis.password}
+    database: ${spring.redis.database}
+#  cloud:
+#    sentinel:
+#      transport:
         # 服务监控端口
-        dashboard: localhost:8080
+#        dashboard: localhost:8080

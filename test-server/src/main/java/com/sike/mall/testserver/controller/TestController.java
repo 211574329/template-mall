@@ -18,8 +18,8 @@ public class TestController {
     private UserClient userClient;
 
     @GetMapping("getUser")
-    public String getUser(){
-        return userClient.getUser();
+    public R<UserVO> getUser(Integer id){
+        return R.success(userClient.getUser(id));
     }
 
     @GetMapping("userInfo")
