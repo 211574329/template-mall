@@ -1,6 +1,5 @@
 package com.sike.mall.util.jwt.util;
 
-import com.alibaba.fastjson.JSON;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
@@ -8,7 +7,8 @@ import io.jsonwebtoken.SignatureAlgorithm;
 
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
-import java.util.*;
+import java.util.Base64;
+import java.util.Date;
 
 public class JwtUtil {
 
@@ -54,7 +54,7 @@ public class JwtUtil {
                 .parseClaimsJws(jwt).getBody();//设置需要解析的jwt
         return claims;
     }
-
+/*
     public static void main(String[] args){
 
         Map<String, Object> user = new HashMap<>();
@@ -68,4 +68,6 @@ public class JwtUtil {
         Claims claims = parseJWT(jwt);
         System.out.println("解密后：" + claims.getSubject());
     }
+
+ */
 }

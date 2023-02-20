@@ -1,0 +1,12 @@
+server:
+  port: 8084
+
+#feign:
+#  httpclient:
+#    enabled: true
+#  hystrix:
+    # 服务降级
+#    enabled: true
+  # 开启openFeign对sentinel的整合
+#  sentinel:
+#    enabled: true

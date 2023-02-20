@@ -2,15 +2,17 @@ package com.sike.mall.result.entity;
 
 import com.sike.mall.result.enums.ResultEnum;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
 /**
  * 响应实体
  *
- * @param <T>
+ * @author sike
  */
 @Data
+@NoArgsConstructor
 public class R<T> implements Serializable {
 
     /**

@@ -1,0 +1,61 @@
+
+server:
+  port: 8082
+
+spring:
+  session:
+    store-type: redis
+  redis:
+    host: ${spring.redis.host}
+    port: ${spring.redis.port}
+    password: ${spring.redis.password}
+    database: ${spring.redis.database}
+    lettuce:
+      pool:
+        #连接池中的最大空闲连接
+        max-idle: 20
+        #连接池中的最小空闲连接
+        min-idle: 0
+        #连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: 30000
+        #连接池最大连接数（使用负值表示没有限制）
+        max-active: 100
+    timeout: 3000
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    serialization:
+      # 格式化输出
+      indent-output: true
+      # 忽略无法转换的对象
+      fail-on-empty-beans: false
+    # 如何序列化
+    #default-property-inclusion: non_null
+    deserialization:
+      # 允许对象忽略json中不存在的属性
+      fail-on-unknown-properties: false
+    parser:
+      # 允许出现特殊字符和转义符
+      allow-unquoted-control-chars: true
+      # 允许出现单引号
+      allow-single-quotes: true
+
+
+feign:
+  httpclient:
+    enabled: true
+  hystrix:
+    # 服务降级
+    enabled: true
+  # 开启openFeign对sentinel的整合
+  sentinel:
+    enabled: true
+
+ribbon:
+  eager-load:
+    # Ribbon选用饥饿加载模式eager-load
+    enabled: true
+    clients: phoenix-provider
+
+logging:
+  level:
+    com.sike.mall.test.service: error
