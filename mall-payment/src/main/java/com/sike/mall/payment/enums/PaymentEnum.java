@@ -23,7 +23,7 @@ public enum PaymentEnum {
 
     public static String getClassName(Integer type) {
         for (PaymentEnum payment : PaymentEnum.values()) {
-            if (payment.type == type) {
+            if (payment.type.equals(type)) {
                 return payment.className;
             }
         }

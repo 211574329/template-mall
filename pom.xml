@@ -15,6 +15,7 @@
         <module>mall-gateway</module>
         <module>mall-common</module>
         <module>mall-payment</module>
+        <module>mall-order</module>
     </modules>
 
     <properties>
@@ -28,7 +29,7 @@
 
         <mysql-connector-java.version>8.0.15</mysql-connector-java.version>
         <mybatis-plus.boot.starter>3.5.2</mybatis-plus.boot.starter>
-        <druid.spring.boot.starter>1.1.22</druid.spring.boot.starter>
+        <druid.spring.boot.starter>1.2.9</druid.spring.boot.starter>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

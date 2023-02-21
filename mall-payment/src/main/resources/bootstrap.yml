@@ -5,7 +5,7 @@ spring:
   cloud:
     nacos:
       # 服务端地址
-      server-addr: localhost:8848
+      server-addr: 82.157.129.178:8848
       # 服务注册
       discovery:
         # 命名空间
@@ -13,4 +13,4 @@ spring:
     sentinel:
       transport:
         # 服务地址
-        dashboard: localhost:8080
+        dashboard: 82.157.129.178:8080

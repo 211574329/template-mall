@@ -9,9 +9,19 @@ import lombok.Getter;
 public enum DateEnum {
 
 
+    /**
+     * yyyyMMdd
+     */
     YYYY_MM_DD("yyyyMMdd"),
-    YY_SS("yyyy-MM-dd HH:mm:ss"),
-    HH_MM_SS("HHmmss");
+    /**
+     * HHmmss
+     */
+    HH_MM_SS("HHmmss"),
+    /**
+     * yyyy-MM-dd HH:mm:ss
+     */
+    YY_SS("yyyy-MM-dd HH:mm:ss");
+
 
 
     private String format;

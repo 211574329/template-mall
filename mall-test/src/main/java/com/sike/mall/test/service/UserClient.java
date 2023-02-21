@@ -19,9 +19,9 @@ public interface UserClient {
     UserVO getUser(@RequestBody UserDTO userDTO);
 
     @GetMapping("get")
-    UserVO get(@RequestParam Integer id);
+    UserVO get(@RequestParam("id") Integer id);
 
     @GetMapping("path/{id}")
-    UserVO path(@PathVariable Integer id);
+    UserVO path(@PathVariable("id") Integer id);
 
 }
