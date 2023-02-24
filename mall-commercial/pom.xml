@@ -8,8 +8,8 @@
         <version>1.0</version>
     </parent>
 
-    <groupId>com.sike.mall</groupId>
-    <artifactId>mall-order</artifactId>
+    <groupId>com.sike.mall.commercial</groupId>
+    <artifactId>mall-commercial</artifactId>
     <version>1.0</version>
 
     <properties>
@@ -24,9 +24,14 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.amqp</groupId>
+            <artifactId>spring-rabbit-test</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>

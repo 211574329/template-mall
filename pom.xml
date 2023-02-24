@@ -14,8 +14,12 @@
         <module>mall-test</module>
         <module>mall-gateway</module>
         <module>mall-common</module>
+        <module>mall-product</module>
         <module>mall-payment</module>
         <module>mall-order</module>
+        <module>mall-platform</module>
+        <module>mall-commercial</module>
+        <module>mall-search</module>
     </modules>
 
     <properties>
@@ -43,6 +47,7 @@
                 <artifactId>spring-boot-starter-parent</artifactId>
                 <version>${spring.boot.version}</version>
                 <type>pom</type>
+                <!--表明后续不需在导入spring boot依赖-->
                 <scope>import</scope>
             </dependency>
             <dependency>
@@ -50,7 +55,6 @@
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring.boot.version}</version>
                 <type>pom</type>
-                <!--表明后续不需在导入spring boot依赖-->
                 <scope>import</scope>
             </dependency>
             <!-- Spring Cloud 版本管理器 -->
