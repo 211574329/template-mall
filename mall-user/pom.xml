@@ -80,7 +80,7 @@
             </resource>
         </resources>
     </build>
-
+<!--
     <profiles>
         <profile>
             <id>dev</id>
@@ -95,5 +95,5 @@
             </properties>
         </profile>
     </profiles>
-
+-->
 </project>

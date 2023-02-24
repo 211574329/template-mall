@@ -1,34 +1,14 @@
+server:
+  port: 8081
+logging:
+  level:
+    com.sike.mall.user.mapper: debug
 
 spring:
-  profiles:
-    active: "@spring.active@"
   session:
     store-type: redis
-  # 数据库
-  datasource:
-    url: ${spring.datasource.url}
-    username: ${spring.datasource.username}
-    password: ${spring.datasource.password}
-  # redis
-  redis:
-    host: ${spring.redis.host}
-    port: ${spring.redis.port}
-    password: ${spring.redis.password}
-    database: ${spring.redis.database}
 
 mybatis-plus:
   type-aliases-package: com.sike.mall.user.entity
-  global-config:
-    # 是否打印mybatis-plus的log
-    banner: false
-    db-config:
-      # id类型
-      id-type: auto
-      # 已删除
-      logic-delete-value: 1
-      # 未删除
-      logic-not-delete-value: 0
   mapper-locations:
     - classpath*:com/sike/mall/user/**/*.xml
-#  configuration:
-#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
