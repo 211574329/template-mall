@@ -4,7 +4,7 @@ spring:
     name: mall-user
   profiles:
     # 环境
-    active: dev
+    active: "@spring.active@"
   cloud:
     nacos:
       # 服务端地址
@@ -22,11 +22,13 @@ spring:
         # 所在分组
         #group: DEV_GROUP
         shared-configs:
-        - data-id: mysql
+        - data-id: mysql.yaml
           refresh: true
-        - data-id: redis
+        - data-id: redis.yaml
           refresh: true
-        - data-id: spring-config
+        - data-id: spring-config.yaml
           refresh: true
+        refresh-enabled: true
+
 
 

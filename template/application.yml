@@ -10,36 +10,33 @@ spring:
     username: ${spring.datasource.username}
     password: ${spring.datasource.password}
     druid:
-      # 下面为连接池的补充设置，应用到上面所有数据源中
       # 初始化大小，最小，最大
       initial-size: 5
-      min-idle: 10
+      min-idle: 5
       max-active: 20
       # 连接池中的minIdle数量以内的连接，空闲时间超过minEvictableIdleTimeMillis，则会执行keepAlive操作
       keep-alive: true
       # 配置获取连接等待超时的时间
       max-wait: 60000
-      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位毫秒
       time-between-eviction-runs-millis: 60000
-      # 配置一个连接在池中最小生存的时间，单位是毫秒
+      # 配置一个连接在池中最小生存时间
       min-evictable-idle-time-millis: 300000
-      # 测试连接是否可用的sql
-      validation-query: SELECT 1 FROM DUAL
+      validation-query: SELECT 1 FROM user
       test-while-idle: true
       test-on-borrow: false
       test-on-return: false
-      # 打开PSCache，并且指定每个连接上PSCache的大小
+      # 打开 PSCache，并且指定每个连接上 PSCache 的大小
       pool-prepared-statements: true
       # 要启用PSCache, 必须配置大于0
       max-open-prepared-statements: 40
       # Spring 监控，利用aop 对指定接口的执行时间，jdbc数进行记录
       aop-patterns: "com.springboot.template.dao.*"
-      # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
       max-pool-prepared-statement-per-connection-size: 20
-      filters: stat,wall
-      use-global-data-source-stat: true
-      # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
-      connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      # 配置监控统计拦截的 Filter，去掉后监控界面 SQL 无法统计，wall 用于防火墙
+      filters: stat,wall,slf4j
+      # 通过 connection-properties 属性打开 mergeSql 功能；慢 SQL 记录
+      connection-properties: druid.stat.mergeSql\=true;druid.stat.slowSqlMillis\=5000
       filter:
         # 开启druiddatasource的状态监控
         stat:
@@ -48,28 +45,29 @@ spring:
           # 开启慢sql监控，超过2s 就认为是慢sql，记录到日志中
           log-slow-sql: true
           slow-sql-millis: 2000
-      # 配置sql监控服务
-      stat-view-servlet:
-        # 启用
-        enabled: true
-        login-username: admin
-        login-password: 123456
-        # 是否可以重置
-        reset-enable: true
-        url-pattern: /druid/*
-        # 添加IP白名单
-        #allow: "127.0.0.1"
-        # 添加IP黑名单，当白名单和黑名单重复时，黑名单优先级更高
-        #deny:
-      # 配置WebStatFilter，用于采集web关联监控的数据
+      # 配置 DruidStatFilter
       web-stat-filter:
         # 启用http://localhost:8080/druid/login.html
         enabled: true
         # 添加过滤规则
         url-pattern: /*
         # 忽略过滤格式
-        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
-
+        exclusions: .js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*
+      # 配置 DruidStatViewServlet
+      stat-view-servlet:
+        url-pattern: /druid/*
+        # IP 白名单，没有配置或者为空，则允许所有访问
+        allow: 127.0.0.1
+        # IP 黑名单，若白名单也存在，则优先使用
+        #deny: 192.168.31.253
+        # 禁用 HTML 中 Reset All 按钮
+        reset-enable: false
+        # 登录用户名/密码
+        login-username: root
+        login-password: 123456
+        # 需要设置enabled=true,否则会报出There was an unexpected error (type=Not Found, status=404).错误，或者将druid-spring-boot-starter的版本降低到1.1.10及以下
+        # 是否启用StatViewServlet（监控页面）默认值为false（考虑到安全问题默认并未启动，如需启用建议设置密码或白名单以保障安全）
+        enabled: true
 
   redis:
     host: ${spring.redis.host}
