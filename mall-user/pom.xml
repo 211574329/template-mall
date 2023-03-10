@@ -52,12 +52,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!--    spring配置    -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
-        </dependency>
+
         <!--    SpringCloud alibaba sentinel (sentinel客户端)    -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
