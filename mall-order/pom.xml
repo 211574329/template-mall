@@ -17,6 +17,22 @@
     </properties>
 
     <dependencies>
+        <!--    SpringBoot基本场景启动依赖    -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <!--    SpringBoot-Web    -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--    SpringBoot测试类依赖    -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>com.sike.mall</groupId>
             <artifactId>mall-common</artifactId>
