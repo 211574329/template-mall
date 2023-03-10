@@ -8,6 +8,7 @@ spring:
   session:
     store-type: redis
 
+
 mybatis-plus:
   type-aliases-package: com.sike.mall.user.entity
   mapper-locations:

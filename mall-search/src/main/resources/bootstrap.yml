@@ -1,10 +1,7 @@
 spring:
   application:
     # 服务名
-    name: mall-test
-  profiles:
-    # 环境
-    active: dev
+    name: mall-search
   cloud:
     nacos:
       # 服务端地址
@@ -19,9 +16,3 @@ spring:
         file-extension: yaml
         # 命名空间
         namespace: 823e9089-86ec-43e4-a116-3a4365581c32
-        # 所在分组
-        #group: DEV_GROUP
-
-    sentinel:
-      transport:
-        dashboard: 82.157.129.178:8080

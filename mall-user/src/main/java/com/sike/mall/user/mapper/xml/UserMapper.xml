@@ -39,7 +39,7 @@
             <if test="user.username != null and user.username != ''">
                 username = #{user.username}
             </if>
-            AND deleted = 1
+            AND deleted = 0
         </where>
 
     </select>

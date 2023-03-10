@@ -21,7 +21,6 @@
     </properties>
 
     <dependencies>
-
         <!--鉴权-->
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
@@ -30,4 +29,5 @@
         </dependency>
 
     </dependencies>
+
 </project>

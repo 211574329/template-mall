@@ -17,46 +17,105 @@
     </properties>
 
     <dependencies>
-
+        <!--    Nacos 服务注册与发现   -->
         <dependency>
-            <groupId>com.sike.mall</groupId>
-            <artifactId>mall-common</artifactId>
-            <version>1.0</version>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
-
+        <!--    Nacos 配置    -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+        </dependency>
+        <!--    bootstrap    -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+        <!--    SpringBoot基本场景启动依赖    -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <!--    SpringBoot-Web    -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!-- redis -->
+        <!--    SpringBoot测试类依赖    -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!--    spring配置    -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!--    SpringCloud alibaba sentinel (sentinel客户端)    -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.dataformat</groupId>
+                    <artifactId>jackson-dataformat-xml</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!--    sentinel持久化存储    -->
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-datasource-nacos</artifactId>
+            <version>1.8.5</version>
+        </dependency>
+        <!--    redis    -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
-        <!-- spring-session-redis -->
+        <!--    spring-session-redis    -->
         <dependency>
             <groupId>org.springframework.session</groupId>
             <artifactId>spring-session-data-redis</artifactId>
         </dependency>
-        <!-- spring-session-redis需要用到 -->
+        <!--    spring-session-redis需要用到    -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-pool2</artifactId>
         </dependency>
-
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
+        <!--    mysql    -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
+        <!--    druid连接池    -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
         </dependency>
 
+        <!--    引入的模块    -->
+        <dependency>
+            <groupId>com.sike.mall</groupId>
+            <artifactId>mall-common</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sike.mall</groupId>
+            <artifactId>mall-plugins</artifactId>
+            <version>1.0</version>
+        </dependency>
 
     </dependencies>
 
@@ -65,6 +124,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring.boot.version}</version>
             </plugin>
         </plugins>
         <resources>
@@ -80,20 +140,20 @@
             </resource>
         </resources>
     </build>
-<!--
-    <profiles>
-        <profile>
-            <id>dev</id>
-            <properties>
-                <spring.active>dev</spring.active>
-            </properties>
-        </profile>
-        <profile>
-            <id>proc</id>
-            <properties>
-                <spring.active>proc</spring.active>
-            </properties>
-        </profile>
-    </profiles>
--->
+    <!--
+        <profiles>
+            <profile>
+                <id>dev</id>
+                <properties>
+                    <spring.active>dev</spring.active>
+                </properties>
+            </profile>
+            <profile>
+                <id>proc</id>
+                <properties>
+                    <spring.active>proc</spring.active>
+                </properties>
+            </profile>
+        </profiles>
+    -->
 </project>

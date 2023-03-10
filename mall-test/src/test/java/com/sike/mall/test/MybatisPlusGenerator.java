@@ -7,9 +7,9 @@ public class MybatisPlusGenerator {
 
     // 官网新版生成 https://baomidou.com/pages/981406/
     public static void main(String[] args) {
-        String url = "jdbc:mysql://local:3306/info?useSSL=false&serverTimezone=UTC&characterEncoding=utf8&allowPublicKeyRetrieval=true&useSSL=false";
-        String username = "root";
-        String password = "123456";
+        String url = "jdbc:mysql://82.157.129.178:3306/info?useSSL=false&serverTimezone=UTC&characterEncoding=utf8&allowPublicKeyRetrieval=true&useSSL=false";
+        String username = "night";
+        String password = "mX6deYkMSLj8tBFc";
 
         String path = System.getProperty("user.dir") + "/mall-test/src/main/java";
         String parentPackage = "com.sike.mall.generator";

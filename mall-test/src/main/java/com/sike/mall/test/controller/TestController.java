@@ -19,6 +19,12 @@ public class TestController {
     @Resource
     private UserClient userClient;
 
+    @RequestMapping("list")
+    public R<UserVO> list(){
+        UserVO build = UserVO.builder().id(1).build();
+        return R.success(build);
+    }
+
     @RequestMapping("getUser")
     public R<UserVO> getUser(@RequestBody UserDTO userDTO){
         return R.success(userClient.getUser(userDTO));

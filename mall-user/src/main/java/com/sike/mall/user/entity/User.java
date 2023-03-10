@@ -1,10 +1,12 @@
 package com.sike.mall.user.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
-import com.baomidou.mybatisplus.annotation.TableId;
-import java.io.Serializable;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * <p>
@@ -14,6 +16,9 @@ import java.io.Serializable;
  * @author  
  * @since 2022-10-09
  */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User extends Model<User> {
 
     private static final long serialVersionUID = 1L;
@@ -22,7 +27,7 @@ public class User extends Model<User> {
      * id
      */
     @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
+    private Long id;
 
     /**
      * 用户名
@@ -60,87 +65,4 @@ public class User extends Model<User> {
     @TableLogic
     private Integer deleted;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public User setId(Integer id) {
-        this.id = id;
-        return this;
-    }
-    public String getUsername() {
-        return username;
-    }
-
-    public User setUsername(String username) {
-        this.username = username;
-        return this;
-    }
-    public String getPassword() {
-        return password;
-    }
-
-    public User setPassword(String password) {
-        this.password = password;
-        return this;
-    }
-    public String getPhone() {
-        return phone;
-    }
-
-    public User setPhone(String phone) {
-        this.phone = phone;
-        return this;
-    }
-    public Integer getStatus() {
-        return status;
-    }
-
-    public User setStatus(Integer status) {
-        this.status = status;
-        return this;
-    }
-    public Integer getSex() {
-        return sex;
-    }
-
-    public User setSex(Integer sex) {
-        this.sex = sex;
-        return this;
-    }
-    public String getHeadPortrait() {
-        return headPortrait;
-    }
-
-    public User setHeadPortrait(String headPortrait) {
-        this.headPortrait = headPortrait;
-        return this;
-    }
-    public Integer getDeleted() {
-        return deleted;
-    }
-
-    public User setDeleted(Integer deleted) {
-        this.deleted = deleted;
-        return this;
-    }
-
-    @Override
-    public Serializable pkVal() {
-        return this.id;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-            "id=" + id +
-            ", username=" + username +
-            ", password=" + password +
-            ", phone=" + phone +
-            ", status=" + status +
-            ", sex=" + sex +
-            ", headPortrait=" + headPortrait +
-            ", deleted=" + deleted +
-        "}";
-    }
 }

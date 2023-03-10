@@ -19,7 +19,6 @@ import java.util.List;
 
 /**
  * 异常解析器
- * @author sike
  */
 @Slf4j
 @RestControllerAdvice

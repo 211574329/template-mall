@@ -3,7 +3,9 @@ package com.sike.mall.user.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.sike.mall.module.user.dto.UserDTO;
+import com.sike.mall.module.user.dto.UserEditDTO;
 import com.sike.mall.module.user.vo.UserVO;
+import com.sike.mall.result.entity.R;
 import com.sike.mall.user.entity.User;
 import com.sike.mall.user.service.IUserService;
 import com.sike.mall.util.page.Pages;
@@ -51,5 +53,9 @@ public class UserController {
         return iUserService.listUser(pages);
     }
 
+    @PostMapping("editHead")
+    public R<String> editHead(UserEditDTO userEditDTO) throws Exception {
+        return R.success(iUserService.editHead(userEditDTO));
+    }
 
 }
