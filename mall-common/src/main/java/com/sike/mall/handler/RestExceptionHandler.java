@@ -1,4 +1,4 @@
-package com.sike.mall.user.handler;
+package com.sike.mall.handler;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
@@ -116,19 +116,6 @@ public class RestExceptionHandler {
     private List<FieldErrorVO> toValidatorMsg(List<FieldError> fieldErrorList) {
         List<FieldErrorVO> list = new ArrayList<>();
         fieldErrorList.stream().forEach(x -> list.add(FieldErrorVO.builder().field(x.getField()).message(x.getDefaultMessage()).build()));
-        /*
-        List<Map<String, String>> mapList = new ArrayList<>();
-        // 循环提取
-        for (FieldError fieldError : fieldErrorList) {
-            Map<String, String> map = new HashMap<>();
-            // 获取验证失败的属性
-            map.put("field", fieldError.getField());
-            // 获取验证失败的的提示信息
-            map.put("msg", fieldError.getDefaultMessage());
-            mapList.add(map);
-        }
-
-         */
         return list;
     }
 }

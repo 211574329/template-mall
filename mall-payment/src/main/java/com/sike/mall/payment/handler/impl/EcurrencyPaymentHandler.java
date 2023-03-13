@@ -2,7 +2,7 @@ package com.sike.mall.payment.handler.impl;
 
 import com.sike.mall.payment.dto.PaymentDTO;
 import com.sike.mall.payment.handler.PaymentHandler;
-import com.sike.mall.payment.result.PaymentResult;
+import com.sike.mall.result.entity.PaymentResult;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,11 +12,10 @@ import org.springframework.stereotype.Service;
 public class EcurrencyPaymentHandler implements PaymentHandler {
 
     @Override
-    public PaymentResult pay(PaymentDTO paymentDTO) {
+    public PaymentResult<Long> pay(PaymentDTO paymentDTO) {
         System.out.println("网银支付方式");
         // 假数据
-        PaymentResult result = new PaymentResult();
-        result.setStatus(true);
-        return result;
+        Long orderNo = 1L;
+        return PaymentResult.success(orderNo);
     }
 }

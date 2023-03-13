@@ -1,4 +1,4 @@
-package com.sike.mall.util.enums;
+package com.sike.mall.enums;
 
 import lombok.Getter;
 

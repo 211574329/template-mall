@@ -5,7 +5,7 @@ import com.sike.mall.payment.dto.PaymentDTO;
 import com.sike.mall.payment.vo.OrderPaymentVO;
 
 /**
- * 订单接口
+ * 支付接口
  */
 public interface PaymentService {
 

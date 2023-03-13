@@ -29,6 +29,7 @@ public class OssResult<T> {
         this.message = resultEnum.getMessage();
         this.data = data;
     }
+
     public OssResult(ResultEnum resultEnum) {
         this.code = resultEnum.getCode();
         this.message = resultEnum.getMessage();
@@ -36,6 +37,10 @@ public class OssResult<T> {
 
     public static <T> OssResult<T> success(ResultEnum resultEnum, T data){
         return new OssResult(resultEnum, data);
+    }
+
+    public static <T> OssResult<T> success(T data){
+        return new OssResult(ResultEnum.SUCCESS, data);
     }
 
     public static <T> OssResult<T> fail(ResultEnum resultEnum){

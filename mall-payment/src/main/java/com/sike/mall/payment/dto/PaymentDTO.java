@@ -18,7 +18,7 @@ public class PaymentDTO implements Serializable {
      * @mock @integer   // 长整型
      */
     @NotNull
-    private Long order;
+    private Long orderNo;
     /**
      * 金额
      * @mock @float(0, 100000) // 浮点型

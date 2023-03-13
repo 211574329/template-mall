@@ -29,7 +29,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
         <!--    oss文件服务    -->
         <dependency>
             <groupId>com.aliyun.oss</groupId>

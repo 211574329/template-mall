@@ -1,6 +1,7 @@
 package com.sike.mall.result.entity;
 
 import com.sike.mall.result.enums.ResultEnum;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -13,6 +14,7 @@ import java.io.Serializable;
  */
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class R<T> implements Serializable {
 
     /**
@@ -27,12 +29,6 @@ public class R<T> implements Serializable {
      * 响应数据
      */
     private T data;
-
-    public R(Integer code, String message, T data) {
-        this.code = code;
-        this.message = message;
-        this.data = data;
-    }
 
     public R(ResultEnum enums) {
         this.code = enums.getCode();
