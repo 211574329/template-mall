@@ -7,7 +7,7 @@ import lombok.Data;
  * oss响应实体
  */
 @Data
-public class OssResult {
+public class OssResult<T> {
 
     /**
      * 状态
@@ -22,9 +22,9 @@ public class OssResult {
     /**
      * 文件路径
      */
-    private String data;
+    private T data;
 
-    public OssResult(ResultEnum resultEnum, String data) {
+    public OssResult(ResultEnum resultEnum, T data) {
         this.code = resultEnum.getCode();
         this.message = resultEnum.getMessage();
         this.data = data;
@@ -34,11 +34,15 @@ public class OssResult {
         this.message = resultEnum.getMessage();
     }
 
-    public static OssResult success(ResultEnum resultEnum, String data){
+    public static <T> OssResult<T> success(ResultEnum resultEnum, T data){
         return new OssResult(resultEnum, data);
     }
 
-    public static OssResult fail(ResultEnum resultEnum){
+    public static <T> OssResult<T> fail(ResultEnum resultEnum){
         return new OssResult(resultEnum);
+    }
+
+    public static <T> OssResult<T> fail(ResultEnum resultEnum, T data){
+        return new OssResult(resultEnum, data);
     }
 }

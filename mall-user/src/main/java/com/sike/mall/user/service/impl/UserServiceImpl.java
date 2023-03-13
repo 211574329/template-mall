@@ -21,6 +21,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
 import javax.annotation.Resource;
+import java.util.Objects;
 
 /**
  * <p>
@@ -50,8 +51,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         User user = getById(userEditDTO.getId());
         Assert.notNull(user, "用户不存在");
 
-        OssResult result = ossUtil.upload(userEditDTO.getFile(), OssConstant.HEAD_PORTRAIT_PATH);
-        Assert.isTrue(result.getCode() == NumericalEnum.TWO_HUNDRED.getNumerical(), "头像上传异常");
+        OssResult<String> result = ossUtil.upload(userEditDTO.getFile(), OssConstant.HEAD_PORTRAIT_PATH);
+        Assert.isTrue(Objects.equals(result.getCode(), NumericalEnum.TWO_HUNDRED.getNumerical()), "头像上传异常");
 
         String headPortrait = user.getHeadPortrait();
         if (StringUtils.isNotBlank(headPortrait)){

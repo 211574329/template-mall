@@ -9,6 +9,7 @@ import com.sike.mall.result.entity.R;
 import com.sike.mall.user.entity.User;
 import com.sike.mall.user.service.IUserService;
 import com.sike.mall.util.page.Pages;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -53,8 +54,9 @@ public class UserController {
         return iUserService.listUser(pages);
     }
 
+
     @PostMapping("editHead")
-    public R<String> editHead(UserEditDTO userEditDTO) throws Exception {
+    public R<String> editHead(@Validated UserEditDTO userEditDTO) {
         return R.success(iUserService.editHead(userEditDTO));
     }
 

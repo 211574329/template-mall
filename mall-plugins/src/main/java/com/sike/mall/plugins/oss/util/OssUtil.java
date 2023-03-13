@@ -34,7 +34,7 @@ public class OssUtil {
      * @param path 上传路径
      * @return
      */
-    public OssResult upload(MultipartFile file, String path) {
+    public OssResult<String> upload(MultipartFile file, String path) {
         String objectName = null;
         InputStream inputStream = null;
         try {
