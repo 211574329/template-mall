@@ -1,0 +1,32 @@
+spring:
+  application:
+    # 服务名
+    name: mall-order
+  cloud:
+    nacos:
+      # 服务端地址
+      server-addr: 82.157.129.178:8848
+      # 服务注册
+      discovery:
+        # 命名空间
+        namespace: 823e9089-86ec-43e4-a116-3a4365581c32
+      # 服务配置
+      config:
+        # 文件后缀名
+        file-extension: yaml
+        # 命名空间
+        namespace: 823e9089-86ec-43e4-a116-3a4365581c32
+        # 公共配置文件
+        shared-configs:
+          - data-id: mysql.yaml
+            refresh: true
+          - data-id: spring-config.yaml
+            refresh: true
+          - data-id: mybatis-plus.yaml
+            refresh: true
+
+    # 限流
+    sentinel:
+      transport:
+        # 服务地址
+        dashboard: 82.157.129.178:8080

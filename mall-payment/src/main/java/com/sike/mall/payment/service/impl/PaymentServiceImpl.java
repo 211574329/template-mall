@@ -1,10 +1,10 @@
 package com.sike.mall.payment.service.impl;
 
-import com.sike.mall.payment.dto.PaymentDTO;
+import com.sike.mall.module.payment.dto.PaymentDTO;
 import com.sike.mall.payment.handler.PaymentHandler;
 import com.sike.mall.payment.handler.PaymentHandlerStrategy;
 import com.sike.mall.payment.service.PaymentService;
-import com.sike.mall.payment.vo.OrderPaymentVO;
+import com.sike.mall.module.payment.vo.OrderPaymentVO;
 import com.sike.mall.result.entity.PaymentResult;
 import org.springframework.stereotype.Service;
 

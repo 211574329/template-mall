@@ -1,4 +1,4 @@
-package com.sike.mall.payment.dto;
+package com.sike.mall.module.payment.dto;
 
 import lombok.Data;
 

@@ -2,9 +2,9 @@ package com.sike.mall.payment.controller;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
-import com.sike.mall.payment.dto.PaymentDTO;
+import com.sike.mall.module.payment.dto.PaymentDTO;
 import com.sike.mall.payment.service.PaymentService;
-import com.sike.mall.payment.vo.OrderPaymentVO;
+import com.sike.mall.module.payment.vo.OrderPaymentVO;
 import com.sike.mall.result.entity.R;
 import com.sike.mall.result.enums.ResultEnum;
 import org.springframework.validation.annotation.Validated;

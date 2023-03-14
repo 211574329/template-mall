@@ -1,4 +1,4 @@
-package com.sike.mall.payment.vo;
+package com.sike.mall.module.payment.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

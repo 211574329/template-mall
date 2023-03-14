@@ -1,6 +1,6 @@
 package com.sike.mall.payment.handler.impl;
 
-import com.sike.mall.payment.dto.PaymentDTO;
+import com.sike.mall.module.payment.dto.PaymentDTO;
 import com.sike.mall.payment.handler.PaymentHandler;
 import com.sike.mall.result.entity.PaymentResult;
 import org.springframework.stereotype.Service;

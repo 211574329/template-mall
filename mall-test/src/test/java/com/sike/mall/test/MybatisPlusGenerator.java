@@ -7,16 +7,13 @@ public class MybatisPlusGenerator {
 
     // 官网新版生成 https://baomidou.com/pages/981406/
     public static void main(String[] args) {
-        String url = "jdbc:mysql://82.157.129.178:3306/info?useSSL=false&serverTimezone=UTC&characterEncoding=utf8&allowPublicKeyRetrieval=true&useSSL=false";
-        String username = "night";
-        String password = "mX6deYkMSLj8tBFc";
 
-        String path = System.getProperty("user.dir") + "/mall-test/src/main/java";
-        String parentPackage = "com.sike.mall.generator";
+        String path = System.getProperty("user.dir") + "/mall-order/src/main/java";
+        String parentPackage = "com.sike.mall.order";
 
-        FastAutoGenerator.create(url, username, password)
+        FastAutoGenerator.create(null, null, null)
                 .globalConfig(builder -> {
-                   builder.author("k")
+                   builder.author("")
                            .outputDir(path);
                 })
                 .packageConfig(builder -> {
@@ -24,7 +21,7 @@ public class MybatisPlusGenerator {
                             //.pathInfo(Collections.singletonMap(OutputFile.mapperXml, "D://"));
                 })
                 .strategyConfig(builder -> {
-                    builder.addInclude("user")
+                    builder.addInclude("order")
                             //.addTablePrefix("t_", "c_")
                             .entityBuilder()
                             // 开启 lombok 模型
