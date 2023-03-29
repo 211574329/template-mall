@@ -2,7 +2,7 @@ server:
   port: 8010
 logging:
   level:
-    com.sike.mall.user.mapper: debug
+    com.echo.mall.user.mapper: debug
 
 spring:
   session:
@@ -10,6 +10,6 @@ spring:
 
 
 mybatis-plus:
-  type-aliases-package: com.sike.mall.user.entity
+  type-aliases-package: com.echo.mall.user.entity
   mapper-locations:
-    - classpath*:com/sike/mall/user/**/*.xml
+    - classpath*:com/echo/mall/user/**/*.xml

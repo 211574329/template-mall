@@ -3,13 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>midnight-mall</artifactId>
-        <groupId>com.sike.mall</groupId>
+        <groupId>com.echo.mall</groupId>
+        <artifactId>template-mall</artifactId>
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.sike.mall</groupId>
+    <groupId>com.echo.mall</groupId>
     <artifactId>mall-common</artifactId>
     <version>1.0</version>
 

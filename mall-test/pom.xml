@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.sike.mall</groupId>
-        <artifactId>midnight-mall</artifactId>
+        <groupId>com.echo.mall</groupId>
+        <artifactId>template-mall</artifactId>
         <version>1.0</version>
     </parent>
 
-    <groupId>com.sike.mall</groupId>
+    <groupId>com.echo.mall</groupId>
     <artifactId>mall-test</artifactId>
     <version>1.0</version>
 
@@ -97,7 +97,7 @@
         </dependency>
 
         <dependency>
-            <groupId>com.sike.mall</groupId>
+            <groupId>com.echo.mall</groupId>
             <artifactId>mall-common</artifactId>
             <version>1.0</version>
         </dependency>

@@ -108,7 +108,7 @@ spring:
       allow-single-quotes: true
 
 mybatis-plus:
-  type-aliases-package: com.sike.mall.user.entity
+  type-aliases-package: com.echo.mall.user.entity
   global-config:
     # 是否打印mybatis-plus的log
     banner: false
@@ -120,6 +120,6 @@ mybatis-plus:
       # 未删除
       logic-not-delete-value: 0
   mapper-locations:
-    - classpath*:com/sike/mall/user/**/*.xml
+    - classpath*:com/echo/mall/user/**/*.xml
 #  configuration:
 #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

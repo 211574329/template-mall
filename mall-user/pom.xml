@@ -3,12 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.sike.mall</groupId>
-        <artifactId>midnight-mall</artifactId>
+        <groupId>com.echo.mall</groupId>
+        <artifactId>template-mall</artifactId>
         <version>1.0</version>
     </parent>
 
-    <groupId>com.sike.mall</groupId>
+    <groupId>com.echo.mall</groupId>
     <artifactId>mall-user</artifactId>
     <version>1.0</version>
 
@@ -87,12 +87,12 @@
 
         <!--    引入的模块    -->
         <dependency>
-            <groupId>com.sike.mall</groupId>
+            <groupId>com.echo.mall</groupId>
             <artifactId>mall-common</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>
-            <groupId>com.sike.mall</groupId>
+            <groupId>com.echo.mall</groupId>
             <artifactId>mall-plugins</artifactId>
             <version>1.0</version>
         </dependency>

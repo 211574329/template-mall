@@ -1,10 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78886c6f-ba2d-4a75-8779-0c95127609da" name="Default Changelist" comment="" />
+    <list default="true" id="78886c6f-ba2d-4a75-8779-0c95127609da" name="Default Changelist" comment="修改readme">
+      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/echo/mall/enums/DateEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/echo/mall/enums/NumericalEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/echo/mall/enums/StockEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/echo/mall/handler/RestExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/echo/mall/module/payment/dto/PaymentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/echo/mall/module/payment/vo/OrderPaymentVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/echo/mall/module/user/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/echo/mall/module/user/dto/UserEditDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/echo/mall/module/user/vo/UserVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/echo/mall/result/entity/PaymentResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/echo/mall/result/entity/R.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/echo/mall/result/enums/ResultEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/echo/mall/result/vo/FieldErrorVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/echo/mall/util/date/DateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/echo/mall/util/jwt/util/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/com/echo/mall/util/page/Pages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/src/main/java/com/sike/mall/enums/DateEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/src/main/java/com/sike/mall/enums/NumericalEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/src/main/java/com/sike/mall/enums/StockEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/src/main/java/com/sike/mall/handler/RestExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/src/main/java/com/sike/mall/module/payment/dto/PaymentDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/src/main/java/com/sike/mall/module/payment/vo/OrderPaymentVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/src/main/java/com/sike/mall/module/user/dto/UserDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/src/main/java/com/sike/mall/module/user/dto/UserEditDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/src/main/java/com/sike/mall/module/user/vo/UserVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/src/main/java/com/sike/mall/result/entity/PaymentResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/src/main/java/com/sike/mall/result/entity/R.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/src/main/java/com/sike/mall/result/enums/ResultEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/src/main/java/com/sike/mall/result/vo/FieldErrorVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/src/main/java/com/sike/mall/util/date/DateUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/src/main/java/com/sike/mall/util/jwt/util/JwtUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/src/main/java/com/sike/mall/util/page/Pages.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-gateway/src/main/java/com/sike/mall/gateway/MallGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-gateway/src/main/java/com/echo/mall/gateway/MallGatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-gateway/src/main/java/com/sike/mall/gateway/config/ErrorHandlerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-gateway/src/main/java/com/echo/mall/gateway/config/ErrorHandlerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-gateway/src/main/java/com/sike/mall/gateway/filter/AuthGlobalFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-gateway/src/main/java/com/echo/mall/gateway/filter/AuthGlobalFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-gateway/src/main/java/com/sike/mall/gateway/filter/TimeGatewayFilterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-gateway/src/main/java/com/echo/mall/gateway/filter/TimeGatewayFilterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-gateway/src/main/java/com/sike/mall/gateway/handler/AuthException.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-gateway/src/main/java/com/echo/mall/gateway/handler/AuthException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-gateway/src/main/java/com/sike/mall/gateway/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-gateway/src/main/java/com/echo/mall/gateway/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-gateway/src/main/java/com/sike/mall/gateway/handler/IllegalityException.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-gateway/src/main/java/com/echo/mall/gateway/handler/IllegalityException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-gateway/src/test/java/com/sike/mall/gateway/MallGatewayApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-gateway/src/test/java/com/echo/mall/gateway/MallGatewayApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-order/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-order/src/main/java/com/sike/mall/order/MallOrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-order/src/main/java/com/echo/mall/order/MallOrderApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-order/src/main/java/com/sike/mall/order/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-order/src/main/java/com/echo/mall/order/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-order/src/main/java/com/sike/mall/order/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-order/src/main/java/com/echo/mall/order/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-order/src/main/java/com/sike/mall/order/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-order/src/main/java/com/echo/mall/order/mapper/OrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-order/src/main/java/com/sike/mall/order/mapper/xml/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-order/src/main/java/com/echo/mall/order/mapper/xml/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-order/src/main/java/com/sike/mall/order/service/IOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-order/src/main/java/com/echo/mall/order/service/IOrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-order/src/main/java/com/sike/mall/order/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-order/src/main/java/com/echo/mall/order/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-order/src/test/java/com/sike/mall/order/MallOrderApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-order/src/test/java/com/echo/mall/order/MallOrderApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-payment/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-payment/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-payment/src/main/java/com/sike/mall/payment/MallPaymentApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-payment/src/main/java/com/echo/mall/payment/MallPaymentApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-payment/src/main/java/com/sike/mall/payment/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-payment/src/main/java/com/echo/mall/payment/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-payment/src/main/java/com/sike/mall/payment/enums/PaymentEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-payment/src/main/java/com/echo/mall/payment/enums/PaymentEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-payment/src/main/java/com/sike/mall/payment/handler/PaymentHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-payment/src/main/java/com/echo/mall/payment/handler/PaymentHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-payment/src/main/java/com/sike/mall/payment/handler/PaymentHandlerStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-payment/src/main/java/com/echo/mall/payment/handler/PaymentHandlerStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-payment/src/main/java/com/sike/mall/payment/handler/impl/AliPaymentHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-payment/src/main/java/com/echo/mall/payment/handler/impl/AliPaymentHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-payment/src/main/java/com/sike/mall/payment/handler/impl/EcurrencyPaymentHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-payment/src/main/java/com/echo/mall/payment/handler/impl/EcurrencyPaymentHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-payment/src/main/java/com/sike/mall/payment/handler/impl/WechatPaymentHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-payment/src/main/java/com/echo/mall/payment/handler/impl/WechatPaymentHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-payment/src/main/java/com/sike/mall/payment/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-payment/src/main/java/com/echo/mall/payment/service/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-payment/src/main/java/com/sike/mall/payment/service/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-payment/src/main/java/com/echo/mall/payment/service/impl/PaymentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-payment/src/test/java/com/sike/mall/payment/MallPaymentApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-payment/src/test/java/com/echo/mall/payment/MallPaymentApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-plugins/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-plugins/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-plugins/src/main/java/com/sike/mall/plugins/MallPluginsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-plugins/src/main/java/com/echo/mall/plugins/MallPluginsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-plugins/src/main/java/com/sike/mall/plugins/oss/config/OssConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-plugins/src/main/java/com/echo/mall/plugins/oss/config/OssConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-plugins/src/main/java/com/sike/mall/plugins/oss/constant/OssConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-plugins/src/main/java/com/echo/mall/plugins/oss/constant/OssConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-plugins/src/main/java/com/sike/mall/plugins/oss/result/OssResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-plugins/src/main/java/com/echo/mall/plugins/oss/result/OssResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-plugins/src/main/java/com/sike/mall/plugins/oss/util/OssUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-plugins/src/main/java/com/echo/mall/plugins/oss/util/OssUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-plugins/src/test/java/com/sike/mall/plugins/MallPluginsApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-plugins/src/test/java/com/echo/mall/plugins/MallPluginsApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-product/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/src/main/java/com/sike/mall/product/MallProductApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-product/src/main/java/com/echo/mall/product/MallProductApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/src/test/java/com/sike/mall/product/MallProductApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-product/src/test/java/com/echo/mall/product/MallProductApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-search/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-search/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-search/src/main/java/com/sike/mall/search/MallSearchApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-search/src/main/java/com/echo/mall/search/MallSearchApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-search/src/test/java/com/sike/mallsearch/MallSearchApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-search/src/test/java/com/sike/mall/search/MallSearchApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-test/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-test/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-test/src/main/java/com/sike/mall/test/MallTestApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-test/src/main/java/com/echo/mall/test/MallTestApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-test/src/main/java/com/sike/mall/test/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-test/src/main/java/com/echo/mall/test/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-test/src/main/java/com/sike/mall/test/service/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-test/src/main/java/com/echo/mall/test/service/UserClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-test/src/main/java/com/sike/mall/test/service/UserClientFallBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-test/src/main/java/com/echo/mall/test/service/UserClientFallBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-test/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-test/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-test/src/test/java/com/sike/mall/test/MallTestApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-test/src/test/java/com/echo/mall/test/MallTestApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-test/src/test/java/com/sike/mall/test/MybatisPlusGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-test/src/test/java/com/echo/mall/test/MybatisPlusGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-user/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-user/src/main/java/com/sike/mall/user/MallUserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-user/src/main/java/com/echo/mall/user/MallUserApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-user/src/main/java/com/sike/mall/user/config/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-user/src/main/java/com/echo/mall/user/config/MybatisPlusConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-user/src/main/java/com/sike/mall/user/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-user/src/main/java/com/echo/mall/user/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-user/src/main/java/com/sike/mall/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-user/src/main/java/com/echo/mall/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-user/src/main/java/com/sike/mall/user/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-user/src/main/java/com/echo/mall/user/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-user/src/main/java/com/sike/mall/user/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-user/src/main/java/com/echo/mall/user/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-user/src/main/java/com/sike/mall/user/mapper/xml/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-user/src/main/java/com/echo/mall/user/mapper/xml/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-user/src/main/java/com/sike/mall/user/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-user/src/main/java/com/echo/mall/user/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-user/src/main/java/com/sike/mall/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-user/src/main/java/com/echo/mall/user/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-user/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-user/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-user/src/test/java/com/sike/mall/user/MallUserApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-user/src/test/java/com/echo/mall/user/MallUserApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/midnight-mall.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/template/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,10 +122,20 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="FxmlFile" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -29,18 +144,35 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="66cf9d2f-b8c1-4e46-9c65-40d1a7cab671" />
+        <option name="url" value="https://github.com/211574329/midnight-mall.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\apache-maven-repository" />
-        <option name="userSettingsFile" value="D:\apache-maven-3.6.1\conf\settings.xml" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2Fsgi8cr1otugdVpPYlMvPLBNmK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="false" />
@@ -48,18 +180,49 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/test-git",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "D:/midnight-mall/mall-order/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.ignored.files",
+    "spring.configuration.checksum": "4089031059db64619f0480ffdaf4b966",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\midnight-mall\user-server\src\main\resources" />
+      <recent name="D:\midnight-mall\mall-order\src\main\resources" />
+      <recent name="D:\midnight-mall" />
+      <recent name="D:\midnight-mall\mall-search\src\main\resources" />
+      <recent name="D:\midnight-mall\mall-plugins\src\main\java\com\sike\mall\plugins" />
+      <recent name="D:\midnight-mall\mall-plugins\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\midnight-mall\mall-user\src\main\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.sike.mall.test" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sike.mall.handler" />
+      <recent name="com.sike.mall.result.entity" />
+      <recent name="com.sike.mall.plugins.oss.constant" />
+      <recent name="com.sike.mall.plugins.oss.config" />
       <recent name="com.mall.userserver" />
     </key>
   </component>
@@ -70,10 +233,10 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.TestServerApplication">
+  <component name="RunManager" selected="Spring Boot.MallUserApplication (1)">
     <configuration name="Generator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.mall.userserver.Generator" />
-      <module name="user-server" />
+      <module name="mall-user" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.mall.userserver.*" />
@@ -84,19 +247,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="test-server" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sike.mall.testserver.TestServerApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServerApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="user-server" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sike.mall.userserver.UserServerApplication" />
+    <configuration name="MybatisPlusGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sike.mall.test.MybatisPlusGenerator" />
+      <module name="mall-test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sike.mall.userserver.*" />
+          <option name="PATTERN" value="com.sike.mall.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,14 +260,103 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sike.mall.user.Tests" />
+      <module name="mall-user" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sike.mall.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallGatewayApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="mall-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.echo.mall.gateway.MallGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallOrderApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="mall-order" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.echo.mall.order.MallOrderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallPaymentApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="mall-payment" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.echo.mall.payment.MallPaymentApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallPluginsApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="mall-plugins" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.echo.mall.plugins.MallPluginsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallProductApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="mall-product" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.echo.mall.product.MallProductApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallSearchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="mall-search" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.echo.mall.search.MallSearchApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallTestApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="mall-test" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.echo.mall.test.MallTestApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallUserApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="mall-user" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.echo.mall.user.MallUserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.MybatisPlusGenerator" />
+      <item itemvalue="Application.Tests" />
+      <item itemvalue="Application.Generator" />
+      <item itemvalue="Spring Boot.MallGatewayApplication (1)" />
+      <item itemvalue="Spring Boot.MallOrderApplication (1)" />
+      <item itemvalue="Spring Boot.MallPaymentApplication (1)" />
+      <item itemvalue="Spring Boot.MallPluginsApplication (1)" />
+      <item itemvalue="Spring Boot.MallProductApplication (1)" />
+      <item itemvalue="Spring Boot.MallSearchApplication" />
+      <item itemvalue="Spring Boot.MallTestApplication (1)" />
+      <item itemvalue="Spring Boot.MallUserApplication (1)" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.UserServerApplication (1)" />
+        <item itemvalue="Application.MybatisPlusGenerator" />
+        <item itemvalue="Application.Tests" />
         <item itemvalue="Application.Generator" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
+  </component>
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="78886c6f-ba2d-4a75-8779-0c95127609da" name="Default Changelist" comment="" />
@@ -126,11 +371,175 @@
       <workItem from="1665368043199" duration="1071000" />
       <workItem from="1665369319234" duration="293000" />
       <workItem from="1665373066522" duration="1832000" />
+      <workItem from="1676435435414" duration="1590000" />
+      <workItem from="1676441365572" duration="2704000" />
+      <workItem from="1676444222044" duration="4477000" />
+      <workItem from="1676448750741" duration="18861000" />
+      <workItem from="1676532395535" duration="21194000" />
+      <workItem from="1676863427387" duration="11357000" />
+      <workItem from="1676882908134" duration="24545000" />
+      <workItem from="1677204829315" duration="4009000" />
+      <workItem from="1677211601934" duration="1318000" />
+      <workItem from="1677218330847" duration="43038000" />
+      <workItem from="1678332480137" duration="46499000" />
+      <workItem from="1680070995958" duration="1809000" />
     </task>
+    <task id="LOCAL-00001" summary="新增异常处理器,修改用户相关接口">
+      <created>1676447574317</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676447574317</updated>
+    </task>
+    <task id="LOCAL-00002" summary="修改响应实体,异常参数">
+      <created>1676448305476</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676448305476</updated>
+    </task>
+    <task id="LOCAL-00003" summary="修改版本依赖,项目结构,新版依赖的相关配置">
+      <created>1676881142472</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1676881142472</updated>
+    </task>
+    <task id="LOCAL-00004" summary="修改版本依赖,项目结构,新版依赖的相关配置">
+      <created>1676881153287</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676881153287</updated>
+    </task>
+    <task id="LOCAL-00005" summary="修改项目配置">
+      <created>1676950282305</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676950282305</updated>
+    </task>
+    <task id="LOCAL-00006" summary="增加商城的各个模块">
+      <created>1677207071052</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1677207071052</updated>
+    </task>
+    <task id="LOCAL-00007" summary="修改依赖关系,增加mybatis-plus新版生成">
+      <created>1677226424068</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1677226424068</updated>
+    </task>
+    <task id="LOCAL-00008" summary="修改yml配置">
+      <created>1677227965003</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1677227965003</updated>
+    </task>
+    <task id="LOCAL-00009" summary="修改项目结构,pom依赖关系,移除无用模块,增加oss文件服务">
+      <created>1678415965308</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1678415965308</updated>
+    </task>
+    <task id="LOCAL-00010" summary="修改pom依赖关系">
+      <created>1678416828206</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1678416828206</updated>
+    </task>
+    <task id="LOCAL-00011" summary="修改pom依赖关系">
+      <created>1678431292208</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1678431292208</updated>
+    </task>
+    <task id="LOCAL-00012" summary="修改oss">
+      <created>1678690301859</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1678690301859</updated>
+    </task>
+    <task id="LOCAL-00013" summary="修改oss,修改支付模块,修改项目结构">
+      <created>1678698905417</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1678698905417</updated>
+    </task>
+    <task id="LOCAL-00014" summary="修改依赖,修改订单模块">
+      <created>1678759627483</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1678759627483</updated>
+    </task>
+    <task id="LOCAL-00015" summary="修改readme">
+      <created>1678773993016</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1678773993016</updated>
+    </task>
+    <task id="LOCAL-00016" summary="修改readme">
+      <created>1680058940554</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1680058940554</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="新增异常处理器,修改用户相关接口" />
+    <MESSAGE value="修改响应实体,异常参数" />
+    <MESSAGE value="修改版本依赖,项目结构,新版依赖的相关配置" />
+    <MESSAGE value="修改项目配置" />
+    <MESSAGE value="增加商城的各个模块" />
+    <MESSAGE value="修改依赖关系,增加mybatis-plus新版生成" />
+    <MESSAGE value="修改yml配置" />
+    <MESSAGE value="修改项目结构,pom依赖关系,移除无用模块,增加oss文件服务" />
+    <MESSAGE value="修改pom依赖关系" />
+    <MESSAGE value="修改oss" />
+    <MESSAGE value="修改oss,修改支付模块,修改项目结构" />
+    <MESSAGE value="修改依赖,修改订单模块" />
+    <MESSAGE value="修改readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改readme" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

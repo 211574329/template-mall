@@ -24,4 +24,4 @@ ribbon:
 
 logging:
   level:
-    com.sike.mall.test.service: error
+    com.echo.mall.test.service: error
