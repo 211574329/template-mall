@@ -3,7 +3,6 @@ package com.echo.mall.module.user.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
@@ -16,17 +15,46 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class UserEditDTO implements Serializable {
 
-    private static final long serialVersionUID = -6336969961136301958L;
-
     /**
      * 用户id
      */
     @NotNull
     private Long id;
 
+
     /**
-     * 头像文件
+     * 用户名
      */
-    @NotNull
-    private MultipartFile file;
+    private String username;
+
+    /**
+     * 昵称
+     */
+    private String nickname;
+
+    /**
+     * 密码
+     */
+    private String password;
+
+    /**
+     * 手机号
+     */
+    private String phone;
+
+    /**
+     * 状态
+     */
+    private Integer status;
+
+    /**
+     * 性别
+     */
+    private Integer sex;
+
+    /**
+     * 签名
+     */
+    private String signature;
+
 }

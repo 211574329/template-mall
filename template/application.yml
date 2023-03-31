@@ -6,9 +6,6 @@ spring:
     store-type: redis
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: ${spring.datasource.url}
-    username: ${spring.datasource.username}
-    password: ${spring.datasource.password}
     druid:
       # 初始化大小，最小，最大
       initial-size: 5
@@ -70,10 +67,6 @@ spring:
         enabled: true
 
   redis:
-    host: ${spring.redis.host}
-    port: ${spring.redis.port}
-    password: ${spring.redis.password}
-    database: ${spring.redis.database}
     lettuce:
       pool:
         #连接池中的最大空闲连接
@@ -123,3 +116,19 @@ mybatis-plus:
     - classpath*:com/echo/mall/user/**/*.xml
 #  configuration:
 #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# 线程池配置
+task:
+  pool:
+    # 线程核心数
+    core-size: 10
+    # 最大线程数
+    max-size: 100
+    # 缓冲队列
+    queue-capacity: 10000
+    # 线程的空闲时间
+    keep-alive: 60
+    # 允许核心线程超时
+    allow-core-thread-timeout: true
+    # 等待任务在关闭时完成
+    wait-shutdown: true

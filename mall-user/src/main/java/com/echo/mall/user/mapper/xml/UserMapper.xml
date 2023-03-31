@@ -6,10 +6,12 @@
     <resultMap id="BaseResultMap" type="com.echo.mall.user.entity.User">
         <id column="id" property="id" />
         <result column="username" property="username" />
+        <result column="nickname" property="nickname" />
         <result column="password" property="password" />
         <result column="phone" property="phone" />
         <result column="status" property="status" />
         <result column="sex" property="sex" />
+        <result column="signature" property="signature" />
         <result column="head_portrait" property="headPortrait" />
         <result column="deleted" property="deleted" />
     </resultMap>
@@ -23,6 +25,32 @@
         <result column="sex" property="sex" />
         <result column="head_portrait" property="headPortrait" />
     </resultMap>
+
+    <update id="updateUser" parameterType="com.echo.mall.module.user.dto.UserEditDTO">
+        UPDATE user
+        <set>
+            <if test="username != null">
+                username = #{username},
+            </if>
+            <if test="nickname != null">
+                nickname = #{nickname},
+            </if>
+            <if test="password != null">
+                password = #{password},
+            </if>
+            <if test="phone != null">
+                phone = #{phone},
+            </if>
+            <if test="signature != null">
+                signature = #{signature},
+            </if>
+            <if test="sex != null">
+                sex = #{sex}
+            </if>
+        </set>
+        WHERE
+        id = #{id} LIMIT 1
+    </update>
 
     <select id="listUser" resultMap="UserVOMap">
         SELECT

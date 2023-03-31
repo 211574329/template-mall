@@ -1,6 +1,7 @@
 package com.echo.mall.user.mapper;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.echo.mall.module.user.dto.UserEditDTO;
 import com.echo.mall.user.entity.User;
 import com.echo.mall.module.user.dto.UserDTO;
 import com.echo.mall.module.user.vo.UserVO;
@@ -25,4 +26,10 @@ public interface UserMapper extends BaseMapper<User> {
      */
     IPage<UserVO> listUser(IPage<UserVO> page, @Param("user") UserDTO userDTO);
 
+    /**
+     * 更新用户
+     * @param userEditDTO   用户信息
+     * @return
+     */
+    Integer updateUser(UserEditDTO userEditDTO);
 }

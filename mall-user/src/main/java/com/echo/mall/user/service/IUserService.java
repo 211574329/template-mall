@@ -2,10 +2,11 @@ package com.echo.mall.user.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.echo.mall.module.user.dto.UserEditDTO;
 import com.echo.mall.user.entity.User;
 import com.echo.mall.util.page.Pages;
 import com.echo.mall.module.user.dto.UserDTO;
-import com.echo.mall.module.user.dto.UserEditDTO;
+import com.echo.mall.module.user.dto.UserEditHeadDTO;
 import com.echo.mall.module.user.vo.UserVO;
 import org.springframework.stereotype.Service;
 
@@ -29,11 +30,17 @@ public interface IUserService extends IService<User> {
     IPage<UserVO> listUser(Pages<UserDTO> pages);
 
     /**
-     * 修改用户头像
+     * 更新用户信息
+     * @param userEditDTO   修改信息dto
+     */
+    void updateUser(UserEditDTO userEditDTO);
+
+    /**
+     * 更新用户头像
      *
-     * @param userEditDTO 修改信息dto
+     * @param userEditHeadDTO   头像修改信息dto
      * @return
      */
-    String editHead(UserEditDTO userEditDTO);
+    String editHead(UserEditHeadDTO userEditHeadDTO);
 
 }

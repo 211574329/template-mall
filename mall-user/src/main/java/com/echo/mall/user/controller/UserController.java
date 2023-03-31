@@ -4,6 +4,7 @@ package com.echo.mall.user.controller;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.echo.mall.module.user.dto.UserDTO;
 import com.echo.mall.module.user.dto.UserEditDTO;
+import com.echo.mall.module.user.dto.UserEditHeadDTO;
 import com.echo.mall.module.user.vo.UserVO;
 import com.echo.mall.result.entity.R;
 import com.echo.mall.user.entity.User;
@@ -56,8 +57,15 @@ public class UserController {
 
 
     @PostMapping("editHead")
-    public R<String> editHead(@Validated UserEditDTO userEditDTO) {
-        return R.success(iUserService.editHead(userEditDTO));
+    public R<String> editHead(@Validated UserEditHeadDTO userEditHeadDTO) {
+        return R.success(iUserService.editHead(userEditHeadDTO));
     }
+
+    @PostMapping("update")
+    public R<String> update(@Validated @RequestBody UserEditDTO userEditDTO) {
+        iUserService.updateUser(userEditDTO);
+        return R.success();
+    }
+
 
 }

@@ -35,6 +35,11 @@ public class User extends Model<User> {
     private String username;
 
     /**
+     * 昵称
+     */
+    private String nickname;
+
+    /**
      * 密码
      */
     private String password;
@@ -53,6 +58,11 @@ public class User extends Model<User> {
      * 性别
      */
     private Integer sex;
+
+    /**
+     * 签名
+     */
+    private String signature;
 
     /**
      * 头像
