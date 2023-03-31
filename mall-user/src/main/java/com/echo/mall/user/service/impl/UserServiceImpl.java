@@ -49,7 +49,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         return userMapper.listUser(iPage, pages.getData());
     }
 
-    @Async(TaskConstant.defaultPoolName)
+    @Async(TaskConstant.DEFAULT_POOL_NAME)
     @Override
     public void updateUser(UserEditDTO userEditDTO) {
         userMapper.updateUser(userEditDTO);
