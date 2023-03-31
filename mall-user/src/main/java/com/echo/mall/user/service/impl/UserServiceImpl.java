@@ -5,7 +5,6 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-
 import com.echo.mall.constant.TaskConstant;
 import com.echo.mall.enums.NumericalEnum;
 import com.echo.mall.module.user.dto.UserDTO;
@@ -13,13 +12,12 @@ import com.echo.mall.module.user.dto.UserEditDTO;
 import com.echo.mall.module.user.dto.UserEditHeadDTO;
 import com.echo.mall.module.user.vo.UserVO;
 import com.echo.mall.plugins.oss.constant.OssConstant;
-import com.echo.mall.plugins.oss.result.OssResult;
 import com.echo.mall.plugins.oss.util.OssUtil;
+import com.echo.mall.result.entity.R;
 import com.echo.mall.user.entity.User;
 import com.echo.mall.user.mapper.UserMapper;
 import com.echo.mall.user.service.IUserService;
 import com.echo.mall.util.page.Pages;
-
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
@@ -63,14 +61,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         User user = getById(userEditHeadDTO.getId());
         Assert.notNull(user, "用户不存在");
 
-        OssResult<String> result = ossUtil.upload(userEditHeadDTO.getFile(), OssConstant.HEAD_PORTRAIT_PATH);
-        Assert.isTrue(Objects.equals(result.getCode(), NumericalEnum.TWO_HUNDRED.getNumerical()), "头像上传异常");
+        R<String> r = ossUtil.upload(userEditHeadDTO.getFile(), OssConstant.HEAD_PORTRAIT_PATH);
+        Assert.isTrue(Objects.equals(r.getCode(), NumericalEnum.TWO_HUNDRED.getNumerical()), "头像上传异常");
 
         String headPortrait = user.getHeadPortrait();
         if (StringUtils.isNotBlank(headPortrait)){
             ossUtil.delete(headPortrait);
         }
-        String url = result.getData();
+        String url = r.getData();
         LambdaUpdateWrapper<User> wrapper = Wrappers.lambdaUpdate();
         wrapper.eq(User::getId, user.getId());
         wrapper.set(User::getHeadPortrait, url);

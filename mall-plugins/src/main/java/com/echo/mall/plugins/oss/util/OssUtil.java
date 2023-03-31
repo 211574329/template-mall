@@ -1,12 +1,12 @@
 package com.echo.mall.plugins.oss.util;
 
 import com.aliyun.oss.OSSClient;
-import com.echo.mall.plugins.oss.constant.OssConstant;
-import com.echo.mall.plugins.oss.result.OssResult;
+import com.echo.mall.enums.DateEnum;
 import com.echo.mall.enums.StockEnum;
+import com.echo.mall.plugins.oss.constant.OssConstant;
+import com.echo.mall.result.entity.R;
 import com.echo.mall.result.enums.ResultEnum;
 import com.echo.mall.util.date.DateUtil;
-import com.echo.mall.enums.DateEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
@@ -33,7 +33,7 @@ public class OssUtil {
      * @param path 上传路径
      * @return  文件存放路径
      */
-    public OssResult<String> upload(MultipartFile file, String path) {
+    public R<String> upload(MultipartFile file, String path) {
         String objectName = null;
         InputStream inputStream = null;
         try {
@@ -41,11 +41,11 @@ public class OssUtil {
             objectName = new StringBuilder(path).append(DateUtil.getNow(DateEnum.YYYY_MM_DD)).append(StockEnum.BAR.getStock()).append(DateUtil.getNow(DateEnum.HH_MM_SS)).append(suffix).toString();
             inputStream = file.getInputStream();
             ossClient.putObject(OssConstant.BUCKET_NAME, objectName, inputStream);
-            return OssResult.success(objectName);
+            return R.success(objectName);
         } catch (Exception e) {
             log.error("文件上传失败, 文件路径:{}", objectName);
             e.printStackTrace();
-            return OssResult.fail(ResultEnum.FILE_ERROR);
+            return R.fail(ResultEnum.FILE_ERROR);
         } finally {
             close(inputStream);
         }
