@@ -43,7 +43,7 @@ public class ExecutorConfig {
     private Boolean waitShutdown;
 
 
-    @Bean(TaskConstant.defaultPoolName)
+    @Bean(TaskConstant.DEFAULT_POOL_NAME)
     public ThreadPoolTaskExecutor taskExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
         // 线程核心数
@@ -51,7 +51,7 @@ public class ExecutorConfig {
         // 最大线程数
         executor.setMaxPoolSize(maxSize);
         // 线程前缀
-        executor.setThreadNamePrefix(TaskConstant.defaultPoolPrefix);
+        executor.setThreadNamePrefix(TaskConstant.DEFAULT_POOL_PREFIX);
         // 缓冲队列
         executor.setQueueCapacity(queueCapacity);
         // 线程的空闲时间
