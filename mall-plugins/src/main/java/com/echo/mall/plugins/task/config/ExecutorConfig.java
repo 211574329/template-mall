@@ -62,6 +62,7 @@ public class ExecutorConfig {
         executor.setWaitForTasksToCompleteOnShutdown(waitShutdown);
         // 当pool达到max size时,不在新线程执行任务,由调用者所在的线程执行
         executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
+        executor.initialize();
         return executor;
     }
 }
