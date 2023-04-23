@@ -8,7 +8,7 @@ VOLUME /data/dockerdata/
 # jar添加到容器里，并重命名为user.jar
 ADD target/mall-user-1.0.jar mall-user.jar
 # 设置端口号，此处只开放一个端口8011
-EXPOSE 8011
+EXPOSE 8015
 # 执行命令，此处运行user.jar
 RUN bash -c 'touch /mall-user.jar'
 ENTRYPOINT ["java","-jar","mall-user.jar"]

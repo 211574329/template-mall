@@ -1,5 +1,5 @@
 server:
-  port: 8011
+  port: 8015
 logging:
   level:
     com.echo.mall.user.mapper: debug
