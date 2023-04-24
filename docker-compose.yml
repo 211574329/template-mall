@@ -3,6 +3,8 @@ version: "3.8"
 services:
 
   mall-user:
+    image: mall-user
+    container_name: mall-user
     build:
       # 构造路径（Dockerfile在的路径）
       context: ./mall-user
@@ -11,6 +13,8 @@ services:
       - "8015:8015"
 
   mall-test:
+    image: mall-test
+    container_name: mall-test
     build:
       context: ./mall-test
       dockerfile: Dockerfile
