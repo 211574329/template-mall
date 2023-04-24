@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+
+  mall-user:
+    build:
+      # 构造路径（Dockerfile在的路径）
+      context: ./mall-user
+      dockerfile: Dockerfile
+    ports:
+      - "8015:8015"
+
+  mall-test:
+    build:
+      context: ./mall-test
+      dockerfile: Dockerfile
+    ports:
+      - "8025:8025"
