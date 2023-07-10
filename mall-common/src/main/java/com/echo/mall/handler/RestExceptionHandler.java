@@ -31,6 +31,7 @@ public class RestExceptionHandler {
      */
     @ExceptionHandler(Exception.class)
     public R<String> handler(Exception e){
+        log.error("Exception:", e);
         Throwable cause = e.getCause() == null ? e : e.getCause();
         String message = e.getMessage();
         if(cause instanceof NumberFormatException){
@@ -47,6 +48,7 @@ public class RestExceptionHandler {
      */
     @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
     public R<String> handler(HttpRequestMethodNotSupportedException e){
+        log.error("Exception:", e);
         return R.fail(ResultEnum.METHOD_NOT_SUPPORTED_ERROR, e.getMessage());
     }
 
@@ -59,6 +61,7 @@ public class RestExceptionHandler {
      */
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public R<List<FieldErrorVO>> handler(MethodArgumentNotValidException e){
+        log.error("Exception:", e);
         // 提取验证失败的所有的信息
         List<FieldError> fieldErrors = e.getBindingResult().getFieldErrors();
         // 格式化
@@ -74,17 +77,19 @@ public class RestExceptionHandler {
      */
     @ExceptionHandler(BindException.class)
     public R<List<FieldErrorVO>> handle(BindException e){
+        log.error("Exception:", e);
         List<FieldError> fieldErrors = e.getBindingResult().getFieldErrors();
         List<FieldErrorVO> list = toValidatorMsg(fieldErrors);
         return R.fail(ResultEnum.VALID_ERROR, list);
     }
     /**
-     * Json异常 如：body为空 / 无法解析的JSON / Integet类型传了String
+     * Json异常 如：body为空 / 无法解析的JSON / Integer类型传了String
      * @param e
      * @return
      */
     @ExceptionHandler({HttpMessageNotReadableException.class, InvalidFormatException.class, JsonParseException.class})
     public R<String> handle(Exception e){
+        log.error("Exception:", e);
         Throwable cause = e.getCause() == null ? e : e.getCause();
         String message = e.getMessage();
         if(cause instanceof InvalidFormatException){
@@ -104,6 +109,7 @@ public class RestExceptionHandler {
      */
     @ExceptionHandler(IllegalArgumentException.class)
     public R<String> handleArgError(IllegalArgumentException e){
+        log.error("Exception:", e);
         return R.fail(ResultEnum.ASSERT_ERROR, e.getMessage());
     }
 

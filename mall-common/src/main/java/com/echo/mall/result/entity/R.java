@@ -57,19 +57,40 @@ public class R<T> implements Serializable {
         return new R<T>(ResultEnum.FAIL);
     }
 
+    /**
+     * 成功
+     * @param t 数据
+     * @return
+     */
     public static <T> R<T> success(T t) {
         return new R<T>(ResultEnum.SUCCESS, t);
     }
 
 
+    /**
+     * 失败
+     * @param t 数据
+     * @return
+     */
     public static <T> R<T> fail(T t) {
         return new R<T>(ResultEnum.FAIL, t);
     }
 
+    /**
+     * 失败
+     * @param resultEnum    枚举
+     * @param t 数据
+     * @return
+     */
     public static <T> R<T> fail(ResultEnum resultEnum, T t){
         return new R<T>(resultEnum, t);
     }
 
+    /**
+     * 失败
+     * @param resultEnum    枚举
+     * @return
+     */
     public static R fail(ResultEnum resultEnum){
         return new R(resultEnum);
     }

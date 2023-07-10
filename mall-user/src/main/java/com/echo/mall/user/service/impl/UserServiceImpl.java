@@ -61,9 +61,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         User user = getById(userEditHeadDTO.getId());
         Assert.notNull(user, "用户不存在");
 
+        // 上传新头像
         R<String> r = ossUtil.upload(userEditHeadDTO.getFile(), OssConstant.HEAD_PORTRAIT_PATH);
-        Assert.isTrue(Objects.equals(r.getCode(), NumericalEnum.TWO_HUNDRED.getNumerical()), "头像上传异常");
+        Assert.isTrue(Objects.equals(r.getCode(), NumericalEnum.TWO_HUNDRED.getIntValue()), "头像上传异常");
 
+        // 删除旧头像
         String headPortrait = user.getHeadPortrait();
         if (StringUtils.isNotBlank(headPortrait)){
             ossUtil.delete(headPortrait);
