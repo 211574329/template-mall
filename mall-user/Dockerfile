@@ -1,4 +1,4 @@
-FROM jdk1.8:latest
+FROM jdk1.8
 # 设置作者信息
 MAINTAINER echo
 #设置镜像的时区,避免出现8小时的误差
