@@ -31,8 +31,6 @@ spring:
           refresh: true
         - data-id: mybatis-plus.yaml
           refresh: true
-        - data-id: oss.yaml
-          refresh: true
 
         refresh-enabled: true
 

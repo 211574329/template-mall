@@ -135,6 +135,8 @@ mybatis-plus:
 # 线程池配置
 task:
   pool:
+    # 线程池前缀
+    prefix: user-
     # 线程核心数
     core-size: 10
     # 最大线程数

@@ -1,5 +1,6 @@
 package com.echo.mall.module.payment.dto;
 
+import lombok.Builder;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;
@@ -10,6 +11,7 @@ import java.math.BigDecimal;
  * 支付信息参数
  */
 @Data
+@Builder
 public class PaymentDTO implements Serializable {
 
     private static final long serialVersionUID = -7985258620999508770L;
@@ -18,7 +20,7 @@ public class PaymentDTO implements Serializable {
      * @mock @integer   // 长整型
      */
     @NotNull
-    private Long orderNo;
+    private Long orderId;
     /**
      * 金额
      * @mock @float(0, 100000) // 浮点型

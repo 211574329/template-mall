@@ -6,7 +6,7 @@ import com.echo.mall.module.payment.dto.PaymentDTO;
 import com.echo.mall.payment.service.PaymentService;
 import com.echo.mall.result.entity.R;
 import com.echo.mall.result.enums.ResultEnum;
-import com.echo.mall.module.payment.vo.OrderPaymentVO;
+import com.echo.mall.module.payment.bo.OrderPaymentBO;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,7 +28,7 @@ public class PaymentController {
      * @return
      */
     @PostMapping("pay")
-    public R<OrderPaymentVO> pay(@RequestBody @Validated PaymentDTO paymentDTO){
+    public R<OrderPaymentBO> pay(@RequestBody @Validated PaymentDTO paymentDTO){
         return R.success(paymentService.pay(paymentDTO));
     }
 
@@ -39,7 +39,7 @@ public class PaymentController {
      */
     @GetMapping("test")
     @SentinelResource(value = "test", blockHandler = "exceptionHandler")
-    public R<OrderPaymentVO> test(PaymentDTO paymentDTO){
+    public R<OrderPaymentBO> test(PaymentDTO paymentDTO){
         return R.success(paymentService.pay(paymentDTO));
     }
 

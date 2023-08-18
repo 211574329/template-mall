@@ -91,11 +91,6 @@
             <artifactId>mall-common</artifactId>
             <version>1.0</version>
         </dependency>
-        <dependency>
-            <groupId>com.echo.mall</groupId>
-            <artifactId>mall-plugins</artifactId>
-            <version>1.0</version>
-        </dependency>
 
     </dependencies>
 

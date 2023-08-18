@@ -1,0 +1,23 @@
+spring:
+  application:
+    # 服务名
+    name: mall-flink
+  cloud:
+    nacos:
+      # 服务端地址
+      server-addr: 82.157.129.178:8848
+      # 服务注册
+      discovery:
+        # 命名空间
+        namespace: 823e9089-86ec-43e4-a116-3a4365581c32
+      # 服务配置
+      config:
+        # 文件后缀名
+        file-extension: yaml
+        # 命名空间
+        namespace: 823e9089-86ec-43e4-a116-3a4365581c32
+        shared-configs:
+          - data-id: mysql.yaml
+            refresh: true
+          - data-id: redis.yaml
+            refresh: true

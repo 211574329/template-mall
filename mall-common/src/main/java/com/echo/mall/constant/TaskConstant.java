@@ -8,11 +8,7 @@ public class TaskConstant {
     /**
      * 默认线程池名
      */
-    public static final String DEFAULT_POOL_NAME = "defaultPool";
+    public static final String POOL_NAME = "taskExecutor";
 
-    /**
-     * 默认线程池前缀
-     */
-    public static final String DEFAULT_POOL_PREFIX = "default-Pool-";
 
 }

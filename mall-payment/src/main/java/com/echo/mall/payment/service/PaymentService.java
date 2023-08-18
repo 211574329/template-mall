@@ -2,7 +2,7 @@ package com.echo.mall.payment.service;
 
 
 import com.echo.mall.module.payment.dto.PaymentDTO;
-import com.echo.mall.module.payment.vo.OrderPaymentVO;
+import com.echo.mall.module.payment.bo.OrderPaymentBO;
 
 /**
  * 支付接口
@@ -14,6 +14,6 @@ public interface PaymentService {
      * @param paymentDTO    订单信息封装
      * @return
      */
-    OrderPaymentVO pay(PaymentDTO paymentDTO);
+    OrderPaymentBO pay(PaymentDTO paymentDTO);
 
 }

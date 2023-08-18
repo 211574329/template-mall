@@ -22,6 +22,16 @@ public class RandomUtil {
     /**
      * 获取随机数
      *
+     * @param max 最大值
+     * @return
+     */
+    public static Long getLong(Long max) {
+        return RANDOM.nextLong(max);
+    }
+
+    /**
+     * 获取随机数
+     *
      * @param min 最小值
      * @param max 最大值
      * @return
