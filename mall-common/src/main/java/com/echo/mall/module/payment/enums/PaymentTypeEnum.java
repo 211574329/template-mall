@@ -1,9 +1,9 @@
-package com.echo.mall.payment.enums;
+package com.echo.mall.module.payment.enums;
 
 /**
  * 支付 枚举类
  */
-public enum PaymentEnum {
+public enum PaymentTypeEnum {
     // 支付宝
     ALI_PAY(1, "aliPaymentHandler"),
     // 微信
@@ -22,7 +22,7 @@ public enum PaymentEnum {
     private String className;
 
     public static String getClassName(Integer type) {
-        for (PaymentEnum payment : PaymentEnum.values()) {
+        for (PaymentTypeEnum payment : PaymentTypeEnum.values()) {
             if (payment.type.equals(type)) {
                 return payment.className;
             }
@@ -30,7 +30,7 @@ public enum PaymentEnum {
         return null;
     }
 
-    PaymentEnum(Integer type, String className) {
+    PaymentTypeEnum(Integer type, String className) {
         this.type = type;
         this.className = className;
     }

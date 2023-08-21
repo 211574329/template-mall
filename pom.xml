@@ -87,6 +87,18 @@
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid.spring.boot.starter}</version>
             </dependency>
+            <!-- hystrix -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+                <version>2.2.10.RELEASE</version>
+            </dependency>
+            <!--  openfeign  -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>2.2.8.RELEASE</version>
+            </dependency>
             <!--    oss客户端    -->
             <dependency>
                 <groupId>com.aliyun.oss</groupId>

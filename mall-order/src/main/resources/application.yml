@@ -1,2 +1,16 @@
 server:
   port: 8040
+
+# 以下配置可去掉
+feign:
+  httpclient:
+    enabled: true
+  hystrix:
+    # 服务降级
+    enabled: true
+
+ribbon:
+  eager-load:
+    # Ribbon选用饥饿加载模式eager-load
+    enabled: true
+    clients: phoenix-provider

@@ -1,7 +1,9 @@
 package com.echo.mall.module.payment.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
@@ -12,6 +14,8 @@ import java.math.BigDecimal;
  */
 @Data
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class PaymentDTO implements Serializable {
 
     private static final long serialVersionUID = -7985258620999508770L;

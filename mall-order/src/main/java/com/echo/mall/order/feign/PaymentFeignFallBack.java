@@ -8,9 +8,10 @@ import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
-public class PaymentClientFallBack implements PaymentClient{
+public class PaymentFeignFallBack implements PaymentFeign {
     @Override
     public R<OrderPaymentBO> pay(PaymentDTO paymentDTO) {
+        log.error("feign调用失败,支付模块异常");
         return R.fail();
     }
 }

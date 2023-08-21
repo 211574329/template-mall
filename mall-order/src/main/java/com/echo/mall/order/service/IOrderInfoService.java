@@ -1,6 +1,6 @@
 package com.echo.mall.order.service;
 
-import com.echo.mall.module.order.OrderDTO;
+import com.echo.mall.module.order.dto.OrderDTO;
 import com.echo.mall.order.entity.OrderInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -14,6 +14,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IOrderInfoService extends IService<OrderInfo> {
 
-    Integer payment(OrderDTO orderDTO);
+    Integer pay(OrderDTO orderDTO);
 
 }

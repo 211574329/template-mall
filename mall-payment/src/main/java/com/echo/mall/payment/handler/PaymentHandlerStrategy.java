@@ -1,6 +1,6 @@
 package com.echo.mall.payment.handler;
 
-import com.echo.mall.payment.enums.PaymentEnum;
+import com.echo.mall.module.payment.enums.PaymentTypeEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
@@ -22,8 +22,8 @@ public class PaymentHandlerStrategy {
      * @return
      */
     public PaymentHandler strategy(Integer type) {
-        String className = PaymentEnum.getClassName(type);
-        Assert.notNull(className, "未找到{" + type + "}类型所对应的处理器");
+        String className = PaymentTypeEnum.getClassName(type);
+        Assert.notNull(className, "未找到{" + type + "}类型所对应的支付处理器");
         return strategyMap.get(className);
     }
 

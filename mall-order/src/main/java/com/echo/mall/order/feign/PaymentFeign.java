@@ -4,8 +4,11 @@ import com.echo.mall.module.payment.bo.OrderPaymentBO;
 import com.echo.mall.module.payment.dto.PaymentDTO;
 import com.echo.mall.result.entity.R;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.PostMapping;
 
-@FeignClient(name = "mall-payment", path = "payment", fallback = PaymentClientFallBack.class)
-public interface PaymentClient {
+@FeignClient(name = "mall-payment", path = "payment", fallback = PaymentFeignFallBack.class)
+public interface PaymentFeign {
+
+    @PostMapping("pay")
     R<OrderPaymentBO> pay(PaymentDTO paymentDTO);
 }
