@@ -14,6 +14,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IOrderInfoService extends IService<OrderInfo> {
 
+    Long create(OrderDTO orderDTO);
+
     Integer pay(OrderDTO orderDTO);
 
 }

@@ -17,6 +17,16 @@ import java.io.Serializable;
 public class OrderPaymentBO implements Serializable {
 
     private static final long serialVersionUID = 2947779100360132110L;
+
+    /**
+     * 订单编号
+     */
+    private Long orderNo;
+
+    /**
+     * 支付流水号
+     */
+    private Long payNo;
     /**
      * 支付信息
      */

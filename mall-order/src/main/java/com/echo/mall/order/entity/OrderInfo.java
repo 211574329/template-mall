@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
@@ -29,10 +30,15 @@ public class OrderInfo implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 订单ID
+     * ID
      */
-    @TableId(value = "order_id", type = IdType.INPUT)
-    private Long orderId;
+    @TableId(value = "id", type = IdType.AUTO)
+    private Long id;
+
+    /**
+     * 订单编号
+     */
+    private Long orderNo;
 
     /**
      * 创建时间
@@ -87,12 +93,12 @@ public class OrderInfo implements Serializable {
     /**
      * 产品价格
      */
-    private Long price;
+    private BigDecimal price;
 
     /**
      * 总值
      */
-    private Long total;
+    private BigDecimal total;
 
     /**
      * 订单状态 1:待付款 2:待发货 3:待收货(已发货) 5:成功 6:失败
@@ -123,6 +129,16 @@ public class OrderInfo implements Serializable {
      * 取消时间
      */
     private LocalDateTime cancelTime;
+
+    /**
+     * 支付类型  1:支付宝 2:微信 3:网银
+     */
+    private Integer payType;
+
+    /**
+     * 支付流水号
+     */
+    private Long payNo;
 
     /**
      * 是否已支付，1.已支付0.未支付

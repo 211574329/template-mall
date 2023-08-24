@@ -28,12 +28,12 @@ public class OrderInfoController {
 
     /**
      * 订单生成
+     *
      * @param orderDTO
      */
-    @PostMapping("generate")
-    public void generate(@RequestBody OrderDTO orderDTO){
-
-
+    @PostMapping("create")
+    public R<Long> create(@RequestBody OrderDTO orderDTO) {
+        return R.success(orderInfoService.create(orderDTO));
     }
 
     /**
@@ -43,7 +43,7 @@ public class OrderInfoController {
      * @return
      */
     @PostMapping("pay")
-    public R<Integer> pay(@RequestBody @Validated OrderDTO orderDTO){
+    public R<Integer> pay(@RequestBody @Validated OrderDTO orderDTO) {
         return R.success(orderInfoService.pay(orderDTO));
     }
 

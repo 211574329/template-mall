@@ -65,12 +65,18 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!--    消息队列    -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
         <!--    sentinel持久化存储    -->
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-datasource-nacos</artifactId>
             <version>1.8.5</version>
         </dependency>
+
 
         <!--    引入的模块    -->
         <dependency>

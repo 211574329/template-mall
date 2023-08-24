@@ -15,10 +15,9 @@ public class OrderDTO implements Serializable {
     private static final long serialVersionUID = 705259482621219658L;
 
     /**
-     * 订单ID
+     * 订单编号
      */
-    @NotNull
-    private Long orderId;
+    private Long orderNo;
 
     /**
      * 用户ID
@@ -27,8 +26,23 @@ public class OrderDTO implements Serializable {
     private Long userId;
 
     /**
+     * 产品spu-id
+     */
+    private Long spuId;
+
+    /**
+     * 产品sku-id
+     */
+    private Long skuId;
+
+    /**
+     * 订单商品总数
+     */
+    private Integer allCount;
+
+    /**
      * 支付类型
      */
     @NotNull
-    private Integer type;
+    private Integer payType;
 }

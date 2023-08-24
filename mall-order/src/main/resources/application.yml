@@ -1,6 +1,13 @@
 server:
   port: 8040
 
+logging:
+  level:
+    com.echo.mall.order.mapper: debug
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
 # 以下配置可去掉
 feign:
   httpclient:

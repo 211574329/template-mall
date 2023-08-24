@@ -20,11 +20,11 @@ public class PaymentDTO implements Serializable {
 
     private static final long serialVersionUID = -7985258620999508770L;
     /**
-     * 订单号
+     * 订单编号
      * @mock @integer   // 长整型
      */
     @NotNull
-    private Long orderId;
+    private Long orderNo;
     /**
      * 金额
      * @mock @float(0, 100000) // 浮点型

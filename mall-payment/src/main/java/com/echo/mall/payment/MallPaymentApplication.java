@@ -1,6 +1,5 @@
 package com.echo.mall.payment;
 
-import com.echo.mall.config.ExecutorConfig;
 import com.echo.mall.config.OssConfig;
 import com.echo.mall.server.OssServer;
 import org.springframework.boot.SpringApplication;
@@ -11,7 +10,7 @@ import org.springframework.context.annotation.FilterType;
 
 @ComponentScan(basePackages = "com.echo.mall", excludeFilters = {
         @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = {
-                OssServer.class, OssConfig.class, ExecutorConfig.class
+                OssServer.class, OssConfig.class
         })
 })
 @SpringBootApplication//(scanBasePackages = "com.echo.mall.*")

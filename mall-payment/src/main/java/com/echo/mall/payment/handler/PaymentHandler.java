@@ -11,7 +11,7 @@ public interface PaymentHandler {
     /**
      * 支付
      * @param paymentDTO    支付参数封装
-     * @return  订单编号
+     * @return  支付流水号
      */
-    Integer pay(PaymentDTO paymentDTO);
+    Long pay(PaymentDTO paymentDTO);
 }

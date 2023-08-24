@@ -4,7 +4,8 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.echo.mall.order.entity.OrderInfo">
-        <id column="order_id" property="orderId" />
+        <id column="id" property="id" />
+        <result column="order_no" property="orderNo" />
         <result column="create_time" property="createTime" />
         <result column="update_time" property="updateTime" />
         <result column="shop_id" property="shopId" />
@@ -23,6 +24,8 @@
         <result column="finally_time" property="finallyTime" />
         <result column="settled_time" property="settledTime" />
         <result column="cancel_time" property="cancelTime" />
+        <result column="pay_type" property="payType" />
+        <result column="pay_no" property="payNo" />
         <result column="is_payed" property="isPayed" />
         <result column="close_type" property="closeType" />
         <result column="deleted" property="deleted" />

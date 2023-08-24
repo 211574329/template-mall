@@ -1,6 +1,5 @@
 package com.echo.mall.order.feign;
 
-import com.echo.mall.module.payment.bo.OrderPaymentBO;
 import com.echo.mall.module.payment.dto.PaymentDTO;
 import com.echo.mall.result.entity.R;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -10,5 +9,5 @@ import org.springframework.web.bind.annotation.PostMapping;
 public interface PaymentFeign {
 
     @PostMapping("pay")
-    R<OrderPaymentBO> pay(PaymentDTO paymentDTO);
+    R<Long> pay(PaymentDTO paymentDTO);
 }

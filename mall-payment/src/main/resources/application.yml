@@ -1,12 +1,19 @@
 server:
   port: 8030
 
-#feign:
-#  httpclient:
-#    enabled: true
-#  hystrix:
-    # 服务降级
-#    enabled: true
-  # 开启openFeign对sentinel的整合
-#  sentinel:
-#    enabled: true
+
+#spring:
+#  rabbitmq:
+#    host:
+#    port:
+#    username: guest
+#    password: guest
+    # 超时时间
+    #connection-timeout: 5000
+    # 消息确认模式
+    #publisher-confirm-type: correlated
+    # 消息送达模式
+    #publisher-returns: true
+    # 不可达消息不会被broker删除
+    #template:
+    #  mandatory: true
