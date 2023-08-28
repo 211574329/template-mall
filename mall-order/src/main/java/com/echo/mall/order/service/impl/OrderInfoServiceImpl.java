@@ -3,12 +3,15 @@ package com.echo.mall.order.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.echo.mall.constant.RabbitConstant;
 import com.echo.mall.enums.NumericalEnum;
+import com.echo.mall.module.order.bo.OrderFlinkBO;
 import com.echo.mall.module.order.dto.OrderDTO;
 import com.echo.mall.module.payment.dto.PaymentDTO;
 import com.echo.mall.order.entity.OrderInfo;
 import com.echo.mall.order.feign.PaymentFeign;
 import com.echo.mall.order.mapper.OrderInfoMapper;
+import com.echo.mall.order.message.MessageService;
 import com.echo.mall.order.service.IOrderInfoService;
 import com.echo.mall.result.entity.R;
 import lombok.extern.slf4j.Slf4j;
@@ -36,7 +39,7 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
     private RedisService redisService;
 
     @Resource
-    private OrderInfoMapper orderInfoMapper;
+    private MessageService messageService;
 
     @Resource
     private PaymentFeign paymentFeign;
@@ -55,6 +58,13 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
                 .createTime(LocalDateTime.now()).updateTime(LocalDateTime.now())
                 .status(1).build();
         save(order);
+        OrderFlinkBO orderFlinkBO = OrderFlinkBO.builder()
+                .orderNo(orderNo)
+                .spuId(orderDTO.getSpuId()).skuId(orderDTO.getSkuId())
+                .allCount(orderDTO.getAllCount())
+                .price(price)
+                .total(price.multiply(new BigDecimal(orderDTO.getAllCount()))).build();
+        messageService.sendMessage(RabbitConstant.ORDER_INFORM_FLINK_EXCHANGE, RabbitConstant.ORDER_INFORM_FLINK_KEY, orderFlinkBO);
         return orderNo;
     }
 

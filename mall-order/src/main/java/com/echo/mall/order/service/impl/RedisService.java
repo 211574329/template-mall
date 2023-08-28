@@ -2,8 +2,6 @@ package com.echo.mall.order.service.impl;
 
 import com.echo.mall.enums.DateEnum;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.ValueOperations;
-import org.springframework.data.redis.support.atomic.RedisAtomicLong;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -36,18 +34,4 @@ public class RedisService {
         return Long.valueOf(orderNo);
     }
 
-    public Long incr(String key) {
-//        ValueOperations<String, String> ops = redisTemplate.opsForValue();
-//        return ops.increment(key, 1L);
-        return new RedisAtomicLong(key, redisTemplate.getConnectionFactory()).incrementAndGet();
-    }
-
-    public Long get(String key) {
-        ValueOperations<String, String> ops = redisTemplate.opsForValue();
-        String value = ops.get(key);
-        if (value == null) {
-            return null;
-        }
-        return Long.parseLong(value);
-    }
 }

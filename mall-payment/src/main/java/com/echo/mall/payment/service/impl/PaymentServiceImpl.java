@@ -37,7 +37,7 @@ public class PaymentServiceImpl implements PaymentService {
         // 假数据
         OrderPaymentBO payment = OrderPaymentBO.builder().orderNo(orderNo).payNo(payNo).message("支付成功").build();
         // 发送消息
-        messageService.sendDirectMessage(RabbitConstant.PAY_INFORM_ORDER_EXCHANGE, RabbitConstant.PAY_INFORM_ORDER_KEY, payment);
+        messageService.sendMessage(RabbitConstant.PAY_INFORM_ORDER_EXCHANGE, RabbitConstant.PAY_INFORM_ORDER_KEY, payment);
     }
 
 }

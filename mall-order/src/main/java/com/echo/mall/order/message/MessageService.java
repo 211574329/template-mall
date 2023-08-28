@@ -1,4 +1,4 @@
-package com.echo.mall.payment.message;
+package com.echo.mall.order.message;
 
 import com.echo.mall.constant.TaskConstant;
 import lombok.extern.slf4j.Slf4j;

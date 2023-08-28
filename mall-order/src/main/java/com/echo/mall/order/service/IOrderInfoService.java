@@ -14,8 +14,18 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IOrderInfoService extends IService<OrderInfo> {
 
+    /**
+     * 创建订单
+     * @param orderDTO  订单信息
+     * @return
+     */
     Long create(OrderDTO orderDTO);
 
+    /**
+     * 支付订单
+     * @param orderDTO  订单信息
+     * @return
+     */
     Integer pay(OrderDTO orderDTO);
 
 }

@@ -20,15 +20,15 @@ import java.time.LocalDateTime;
  */
 @Slf4j
 @Component
-public class PayReceiver {
+public class PayConsumer {
 
     @Resource
     private IOrderInfoService orderInfoService;
 
     /**
-     * 消费消息
+     * 订单支付成功的通知
      *
-     * @param payment
+     * @param payment   订单支付信息
      */
     @RabbitListener(queues = RabbitConstant.PAY_INFORM_ORDER_QUEUE)// 监听队列
     @RabbitHandler

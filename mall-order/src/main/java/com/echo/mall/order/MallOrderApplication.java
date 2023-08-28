@@ -1,6 +1,5 @@
 package com.echo.mall.order;
 
-import com.echo.mall.config.ExecutorConfig;
 import com.echo.mall.config.OssConfig;
 import com.echo.mall.server.OssServer;
 import org.mybatis.spring.annotation.MapperScan;
@@ -11,15 +10,17 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 @ComponentScan(basePackages = "com.echo.mall", excludeFilters = {
         @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = {
-                OssServer.class, OssConfig.class, ExecutorConfig.class
+                OssServer.class, OssConfig.class
         })
 })
 @SpringBootApplication//(scanBasePackages = "com.echo.mall")
 @EnableDiscoveryClient
 @EnableFeignClients
+@EnableAsync
 @EnableHystrix
 @MapperScan("com.echo.mall.order.**.mapper")
 public class MallOrderApplication {
