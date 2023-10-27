@@ -1,10 +1,11 @@
 package com.echo.mall.handler;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import com.echo.mall.result.entity.R;
 import com.echo.mall.result.enums.ResultEnum;
 import com.echo.mall.result.vo.FieldErrorVO;
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.exc.InvalidFormatException;
+import com.fasterxml.jackson.databind.exc.MismatchedInputException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.BindException;
@@ -87,18 +88,24 @@ public class RestExceptionHandler {
      * @param e
      * @return
      */
-    @ExceptionHandler({HttpMessageNotReadableException.class, InvalidFormatException.class, JsonParseException.class})
+    @ExceptionHandler({HttpMessageNotReadableException.class, InvalidFormatException.class, MismatchedInputException.class, JsonParseException.class})
     public R<String> handle(Exception e){
         log.error("Exception:", e);
         Throwable cause = e.getCause() == null ? e : e.getCause();
         String message = e.getMessage();
         if(cause instanceof InvalidFormatException){
+            // 参数异常，如:Integer类型传了String
             return R.fail(ResultEnum.INVALID_FORMAT_ERROR, message);
         }
+        if (cause instanceof MismatchedInputException) {
+            // JSON为空
+            return R.fail(ResultEnum.REQUEST_BODY_MISS, message);
+        }
         if (cause instanceof JsonParseException){
+            // JSON无法解析
             return R.fail(ResultEnum.JSON_PARSE_ERROR, message);
         }
-        return R.fail(ResultEnum.REQUEST_BODY_MISS, message);
+        return R.fail(ResultEnum.HTTP_MESSAGE_ERROR, message);
     }
 
 

@@ -34,6 +34,8 @@ public enum ResultEnum {
     METHOD_NOT_SUPPORTED_ERROR(208, "请求方式错误"),
     // 数字类型转换异常
     NUMBER_FORMAT_ERROR(209, "数字类型转换异常"),
+    // http消息异常
+    HTTP_MESSAGE_ERROR(210, "http消息异常"),
 
     // 业务异常
     // 未登录

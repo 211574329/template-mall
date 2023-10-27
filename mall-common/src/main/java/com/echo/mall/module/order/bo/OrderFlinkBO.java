@@ -28,9 +28,19 @@ public class OrderFlinkBO implements Serializable {
     private Long spuId;
 
     /**
+     * spu名称
+     */
+    private String spuName;
+
+    /**
      * 产品sku-id
      */
     private Long skuId;
+
+    /**
+     * sku名称
+     */
+    private String skuName;
 
     /**
      * 订单商品总数

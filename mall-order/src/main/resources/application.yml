@@ -1,6 +1,23 @@
 server:
   port: 8040
 
+spring:
+  rabbitmq:
+    host: 152.136.52.171
+    port: 5673
+    username: guest
+    password: P0m#5@jds.Knv5398#8.tv2z
+  cloud:
+    stream:
+      bindings:
+        order:
+          # 使用RabbitMQ作为消息中间件
+          binder: rabbit
+          # 输入通道的名称，即RabbitMQ队列的名称
+          destination: flink
+          # 消息的内容类型
+          content-type: application/json
+
 logging:
   level:
     com.echo.mall.order.mapper: debug
@@ -8,12 +25,14 @@ logging:
 #  configuration:
 #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
-# 以下配置可去掉
+
 feign:
   httpclient:
     enabled: true
   hystrix:
     # 服务降级
+    enabled: true
+  circuitbreaker:
     enabled: true
 
 ribbon:

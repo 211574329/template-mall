@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * <p>
@@ -35,9 +36,9 @@ public class Sku implements Serializable {
     private String skuName;
 
     /**
-     * 售价，整数方式保存
+     * 价格
      */
-    private Long priceFee;
+    private BigDecimal priceFee;
 
 
 

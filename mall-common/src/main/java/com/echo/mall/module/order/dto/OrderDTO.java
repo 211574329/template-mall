@@ -26,11 +26,6 @@ public class OrderDTO implements Serializable {
     private Long userId;
 
     /**
-     * 产品spu-id
-     */
-    private Long spuId;
-
-    /**
      * 产品sku-id
      */
     private Long skuId;

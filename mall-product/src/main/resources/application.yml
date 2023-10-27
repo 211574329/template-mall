@@ -1,6 +1,6 @@
 
 flink:
   jobmanager:
-    host: 82.157.129.178
+    host: 152.136.52.171
     port: 6123
     parallelism: 1
