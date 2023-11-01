@@ -56,4 +56,14 @@ public class OrderFlinkBO implements Serializable {
      * 总值
      */
     private BigDecimal total;
+
+    /**
+     * 用户所在地区编号
+     */
+    private Integer areaNo;
+
+    /**
+     * 用户所在地区名称
+     */
+    private String areaName;
 }

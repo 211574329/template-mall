@@ -51,7 +51,7 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
     // 假数据
     final static List<Sku> LIST = new ArrayList<>();
     static {
-        LIST.add(new Sku(0L,1L,"",new BigDecimal(5300)));
+        LIST.add(new Sku(0L,0L,"杂牌",new BigDecimal(400)));
         LIST.add(new Sku(1L,1L,"iQOO",new BigDecimal(5300)));
         LIST.add(new Sku(2L,1L,"OPPO",new BigDecimal(4500)));
         LIST.add(new Sku(3L,1L,"VIVO",new BigDecimal(4300)));
