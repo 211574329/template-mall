@@ -23,9 +23,7 @@ import org.springframework.util.Assert;
 import javax.annotation.Resource;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * <p>
@@ -50,6 +48,8 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
 
     // 假数据
     final static List<Sku> LIST = new ArrayList<>();
+
+    final static Map<Integer, String> AREA = new HashMap<>();
     static {
         LIST.add(new Sku(0L,0L,"杂牌",new BigDecimal(400)));
         LIST.add(new Sku(1L,1L,"iQOO",new BigDecimal(5300)));
@@ -61,6 +61,17 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
         LIST.add(new Sku(7L,2L,"惠普",new BigDecimal(7590)));
         LIST.add(new Sku(8L,2L,"外星人",new BigDecimal(12000)));
         LIST.add(new Sku(9L,2L,"机械革命",new BigDecimal(6900)));
+
+        AREA.put(1, "北京");
+        AREA.put(2, "上海");
+        AREA.put(3, "深圳");
+        AREA.put(4, "天津");
+        AREA.put(5, "新疆");
+        AREA.put(6, "黑龙江");
+        AREA.put(7, "云南");
+        AREA.put(8, "山东");
+        AREA.put(9, "安徽");
+        AREA.put(10, "广西");
     }
 
     @Override
@@ -68,6 +79,7 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
         Long orderNo = redisService.Generate();
         // 实际为调用商品feign接口,此处为测试
         Sku sku = LIST.get(orderDTO.getSkuId().intValue());
+        String areaName = AREA.get(orderDTO.getAreaId());
         BigDecimal price = sku.getPriceFee();
         OrderInfo order = OrderInfo.builder()
                 .orderNo(orderNo)
@@ -83,6 +95,7 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
                 .orderNo(orderNo)
                 .spuId(sku.getSpuId()).skuId(sku.getSkuId())
                 .skuName(sku.getSkuName())
+                .areaId(orderDTO.getAreaId()).areaName(areaName)
                 .allCount(orderDTO.getAllCount())
                 .price(price)
                 .total(price.multiply(new BigDecimal(orderDTO.getAllCount()))).build();

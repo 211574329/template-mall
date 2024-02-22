@@ -36,6 +36,11 @@ public class OrderDTO implements Serializable {
     private Integer allCount;
 
     /**
+     * 区域ID
+     */
+    private Integer areaId;
+
+    /**
      * 支付类型
      */
     @NotNull
